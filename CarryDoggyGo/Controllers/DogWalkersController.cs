@@ -32,7 +32,7 @@ namespace CarryDoggyGo.Controllers
         {
             var dogWalkerList = await _context.DogWalkers.ToListAsync();
 
-            var dogWalkers = _mapper.Map<IEnumerable<DogWalker>, IEnumerable<DogWalkerModel>>(dogWalkerList); // esto es lo mismo que lo comentado abajo solo que más rápido.
+            var dogWalkersModel = _mapper.Map<IEnumerable<DogWalkerModel>>(dogWalkerList); // esto es lo mismo que lo comentado abajo solo que más rápido.
             //return dogWalkerList.Select(d => new DogWalkerModel
             //{
             //    DogWlakerId   = d.DogWalkerId,
