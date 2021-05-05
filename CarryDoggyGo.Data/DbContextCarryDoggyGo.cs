@@ -15,7 +15,7 @@ namespace CarryDoggyGo.Data
         {
         }
         public DbSet<DogOwner> DogOwners  { get; set; }
-        public DbSet<DogWalker> DogWalkers{ get; set; }
+        public DbSet<DogWalker> DogWalkers { get; set; }
         public DbSet<Dog> Dogs{ get; set; }
         public DbSet<DogCareItem> DogCareItems{ get; set; }
         public DbSet<CareItem> CareItems{ get; set; }
