@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using CarryDoggyGo.Data;
+﻿using CarryDoggyGo.Data;
 using CarryDoggyGo.Entities;
 using CarryDoggyGo.Models;
 using CarryDoggyGo.Models.DogWalker;
@@ -19,11 +18,10 @@ namespace CarryDoggyGo.Controllers
     public class DogWalkersController : ControllerBase
     {
         private readonly DbContextCarryDoggyGo _context;
-        private readonly IMapper _mapper;
-        public DogWalkersController(DbContextCarryDoggyGo context, IMapper mapper)
+
+        public DogWalkersController(DbContextCarryDoggyGo context)
         {
             _context = context;
-            _mapper = mapper;
         }
 
         // GET: api/DogWalkers
@@ -32,6 +30,7 @@ namespace CarryDoggyGo.Controllers
         {
             var dogWalkerList = await _context.DogWalkers.ToListAsync();
 
+<<<<<<< HEAD
             var dogWalkersModel = _mapper.Map<IEnumerable<DogWalkerModel>>(dogWalkerList); // esto es lo mismo que lo comentado abajo solo que más rápido.
             //return dogWalkerList.Select(d => new DogWalkerModel
             //{
@@ -46,6 +45,19 @@ namespace CarryDoggyGo.Controllers
             //}); 
             return dogWalkers;
 
+=======
+            return dogWalkerList.Select(d => new DogWalkerModel
+            {
+                DogWlakerId = d.DogWalkerId,
+                Name = d.Name,
+                LastName = d.LastName,
+                Phone = d.Phone,
+                Email = d.Email,
+                Password = d.Password,
+                Description = d.Description,
+                PaymentAmount = d.PaymentAmount
+            });
+>>>>>>> feature/DogWalkerController
         }
 
         // GET api/DogWalkers/5
@@ -77,18 +89,16 @@ namespace CarryDoggyGo.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var dogWalker = _mapper.Map<CreateDogWalkerModel, DogWalker>(model); // esto es lo mismo que lo comentado abajo solo que más rápido.
-
-            //DogWalker dogWalker = new DogWalker
-            //{
-            //    Name = model.Name,
-            //    LastName = model.LastName,
-            //    Phone = model.Phone,
-            //    Email = model.Email,
-            //    Password = model.Password,
-            //    Description = model.Description,
-            //    PaymentAmount = model.PaymentAmount
-            //};
+            DogWalker dogWalker = new DogWalker
+            {
+                Name = model.Name,
+                LastName = model.LastName,
+                Phone = model.Phone,
+                Email = model.Email,
+                Password = model.Password,
+                Description = model.Description,
+                PaymentAmount = model.PaymentAmount
+            };
             _context.DogWalkers.Add(dogWalker);
             try
             {
@@ -118,7 +128,14 @@ namespace CarryDoggyGo.Controllers
             if (dogWalker == null)
                 return NotFound();
 
-             dogWalker = _mapper.Map<UpdateDogWalkerModel, DogWalker>(model); 
+
+
+            dogWalker.Name = model.Name;
+            dogWalker.LastName = model.LastName;
+            dogWalker.Phone = model.Phone;
+            dogWalker.Password = model.Password;
+            dogWalker.Description = model.Description;
+            dogWalker.PaymentAmount = model.PaymentAmount;
 
             try
             {
