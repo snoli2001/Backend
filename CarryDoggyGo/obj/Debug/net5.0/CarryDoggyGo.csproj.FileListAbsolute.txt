@@ -64,3 +64,11 @@ E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo\obj\Debug\net5.0\ref\CarryDoggy
 E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo\obj\Debug\net5.0\CarryDoggyGo.pdb
 E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo\obj\Debug\net5.0\CarryDoggyGo.genruntimeconfig.cache
 E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo\bin\Debug\net5.0\AutoMapper.dll
+E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo\bin\Debug\net5.0\BoDi.dll
+E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo\bin\Debug\net5.0\Cucumber.Messages.dll
+E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo\bin\Debug\net5.0\Gherkin.dll
+E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo\bin\Debug\net5.0\Google.Protobuf.dll
+E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo\bin\Debug\net5.0\TechTalk.SpecFlow.dll
+E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo\bin\Debug\net5.0\Utf8Json.dll

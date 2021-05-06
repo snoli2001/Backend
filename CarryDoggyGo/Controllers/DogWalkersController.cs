@@ -30,22 +30,7 @@ namespace CarryDoggyGo.Controllers
         {
             var dogWalkerList = await _context.DogWalkers.ToListAsync();
 
-<<<<<<< HEAD
-            var dogWalkersModel = _mapper.Map<IEnumerable<DogWalkerModel>>(dogWalkerList); // esto es lo mismo que lo comentado abajo solo que más rápido.
-            //return dogWalkerList.Select(d => new DogWalkerModel
-            //{
-            //    DogWlakerId   = d.DogWalkerId,
-            //    Name          = d.Name,
-            //    LastName      = d.LastName,
-            //    Phone         = d.Phone,
-            //    Email         = d.Email,
-            //    Password      = d.Password,
-            //    Description   = d.Description,
-            //    PaymentAmount = d.PaymentAmount
-            //}); 
-            return dogWalkers;
 
-=======
             return dogWalkerList.Select(d => new DogWalkerModel
             {
                 DogWlakerId = d.DogWalkerId,
@@ -57,7 +42,7 @@ namespace CarryDoggyGo.Controllers
                 Description = d.Description,
                 PaymentAmount = d.PaymentAmount
             });
->>>>>>> feature/DogWalkerController
+
         }
 
         // GET api/DogWalkers/5

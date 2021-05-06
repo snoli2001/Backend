@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarryDoggyGo.Data", "..\Car
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarryDoggyGo.Entities", "..\CarryDoggyGo.Entities\CarryDoggyGo.Entities.csproj", "{D4AF0C4D-4A18-47EE-A3F1-D146C2A174E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarryDoggyGoTesting", "..\CarryDoggyGoTesting\CarryDoggyGoTesting.csproj", "{6907BD6C-CE11-497E-8C89-CAFFAD4A7B53}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D4AF0C4D-4A18-47EE-A3F1-D146C2A174E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4AF0C4D-4A18-47EE-A3F1-D146C2A174E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4AF0C4D-4A18-47EE-A3F1-D146C2A174E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6907BD6C-CE11-497E-8C89-CAFFAD4A7B53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6907BD6C-CE11-497E-8C89-CAFFAD4A7B53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6907BD6C-CE11-497E-8C89-CAFFAD4A7B53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6907BD6C-CE11-497E-8C89-CAFFAD4A7B53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
