@@ -28,7 +28,7 @@ namespace CarryDoggyGo.Controllers
         public async Task<IEnumerable<DogOwnerModel>> Get()
         {
             var dogOwnerList = await _context.DogOwners.ToListAsync();
-            
+
             // dogOwner -> dogOwnerModel
             return dogOwnerList.Select(dogOwner => new DogOwnerModel
             {
@@ -37,7 +37,7 @@ namespace CarryDoggyGo.Controllers
                 Phone = dogOwner.Phone,
                 Email = dogOwner.Email,
                 Address = dogOwner.Address
-            }); 
+            });
         }
 
         // GET api/<DogOwnersController>/5
@@ -51,7 +51,7 @@ namespace CarryDoggyGo.Controllers
         [HttpPost]
         public async Task<IActionResult> PostAsync([FromBody] CreateDogOwnerModel model)
         {
-            
+
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
@@ -62,7 +62,7 @@ namespace CarryDoggyGo.Controllers
                 Email = model.Email,
                 Password = model.Password,
                 Phone = model.Phone,
-                Address= model.Address,
+                Address = model.Address,
             };
             _context.DogOwners.Add(dogOwner);
             try
@@ -80,14 +80,66 @@ namespace CarryDoggyGo.Controllers
 
         // PUT api/<DogOwnersController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+
+
+        public async Task<IActionResult> PutDogOwner(int id, [FromBody] UpdateDogowner model)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            if (id <= 0)
+                return BadRequest();
+
+            var dogowner = await _context.DogOwners.FirstOrDefaultAsync(d => d.DogOwnerId == id);
+
+            if (dogowner == null)
+                return NotFound();
+
+
+
+            dogowner.Name = model.Name;
+            dogowner.LastName = model.LastName;
+            dogowner.Email = model.Email;
+            dogowner.Password = model.Password;
+            dogowner.Phone = model.Phone;
+            dogowner.Address = model.Address;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+            return Ok();
+
+
         }
+
 
         // DELETE api/<DogOwnersController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+
+        public async Task<IActionResult> Delete(int id)
         {
+            var existingDogowner = await _context.DogOwners.FindAsync(id);
+            if (existingDogowner == null)
+                return NotFound();
+
+            try
+            {
+                _context.Remove(existingDogowner);
+                await _context.SaveChangesAsync();
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            return Ok(existingDogowner);
         }
+
     }
 }

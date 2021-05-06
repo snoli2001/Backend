@@ -29,13 +29,6 @@ namespace CarryDoggyGo.Data
             modelBuilder.ApplyConfiguration(new DogMap());
             modelBuilder.ApplyConfiguration(new CareItemMap());
 
-
-            //modelBuilder.Entity<User>()
-            //    .ToTable("users")
-            //    .HasDiscriminator<int>("User_type")
-            //    .HasValue<DogOwner>(1)
-            //    .HasValue<DogWalker>(2);
-
         }
 
     }

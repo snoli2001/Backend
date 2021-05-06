@@ -38,7 +38,6 @@ namespace CarryDoggyGo.Controllers
                 LastName = d.LastName,
                 Phone = d.Phone,
                 Email = d.Email,
-                Password = d.Password,
                 Description = d.Description,
                 PaymentAmount = d.PaymentAmount
             });
@@ -61,7 +60,6 @@ namespace CarryDoggyGo.Controllers
                 LastName = dogWalker.LastName,
                 Phone = dogWalker.Phone,
                 Email = dogWalker.Email,
-                Password = dogWalker.Password,
                 Description = dogWalker.Description,
                 PaymentAmount = dogWalker.PaymentAmount
             });
@@ -94,7 +92,7 @@ namespace CarryDoggyGo.Controllers
                 return BadRequest(ex.Message);
             }
 
-            return Ok();
+            return Ok(model);
 
         }
 
@@ -131,7 +129,7 @@ namespace CarryDoggyGo.Controllers
                 return BadRequest(ex.Message);
             }
 
-            return Ok();
+            return Ok(model);
 
 
         }
@@ -154,7 +152,7 @@ namespace CarryDoggyGo.Controllers
             {
                 return BadRequest(ex.Message);
             }
-            return Ok();
+            return Ok(existingDogWalker);
         }
     }
 }

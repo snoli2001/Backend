@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace CarryDoggyGo.Entities
+namespace CarryDoggyGo.Models.DogOwner
 {
-    public abstract class User
+    public class UpdateDogowner
     {
         [Required]
         [StringLength(50, MinimumLength = 2)]
@@ -22,11 +21,12 @@ namespace CarryDoggyGo.Entities
         [EmailAddress]
         public string Email { get; set; }
         [Required]
-        public DateTime Birthdate { get; set; }
-        [Required]
         [StringLength(20, MinimumLength = 6)]
         public string Password { get; set; }
-        public DateTime RegisterDate { get; set; }
+        [Required]
+        [StringLength(200, MinimumLength = 6)]
+        public string Address { get; set; }
+
 
     }
 }

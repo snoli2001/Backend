@@ -2,7 +2,6 @@ E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo.Entities\bin\Debug\net5.0\Carry
 E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo.Entities\bin\Debug\net5.0\CarryDoggyGo.Entities.dll
 E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo.Entities\bin\Debug\net5.0\ref\CarryDoggyGo.Entities.dll
 E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo.Entities\bin\Debug\net5.0\CarryDoggyGo.Entities.pdb
-E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.csprojAssemblyReference.cache
 E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.GeneratedMSBuildEditorConfig.editorconfig
 E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.AssemblyInfoInputs.cache
 E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.AssemblyInfo.cs
@@ -10,3 +9,4 @@ E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0\Carry
 E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.dll
 E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0\ref\CarryDoggyGo.Entities.dll
 E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.pdb
+E:\2021-01\Aplicaciones Web\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.csprojAssemblyReference.cache
