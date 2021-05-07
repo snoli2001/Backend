@@ -7,6 +7,7 @@ namespace CarryDoggyGo.Models.DogOwner
 {
     public class DogOwnerModel
     {
+        public int DogOnwerId { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
         public string Phone { get; set; }

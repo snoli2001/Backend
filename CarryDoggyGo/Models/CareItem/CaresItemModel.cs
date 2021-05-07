@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CarryDoggyGo.Models.CaresItem
 {
-    public class CaresItem
+    public class CaresItemModel
     {
         public int CareItemId { get; set; }
         public string Name { get; set; }

@@ -27,115 +27,109 @@ namespace CarryDoggyGoTesting
         }
 
 
-        //[Fact]
-        //public async Task GetDogWalkerAsyncReturnAIEnumerableOfDogWalkerModel()
-        //{
-        //    using (var _context = new DbContextCarryDoggyGo(_options))
-        //    {
-        //        //Arrange
-        //        _context.DogOwners.AddRange(_dogOwners);
-        //        _context.SaveChanges();
+        [Fact]
+        public async Task GetDogOwnerrAsyncReturnAIEnumerableOfDogOwnerModel()
+        {
+            using (var _context = new DbContextCarryDoggyGo(_options))
+            {
+                //Arrange
+                _context.DogOwners.AddRange(_dogOwners);
+                _context.SaveChanges();
+                var controller = new DogOwnersController(_context);
+                //Act
+                var result = await controller.Get();
+                //Assert
+                Assert.True(typeof(IEnumerable<DogOwnerModel>).IsInstanceOfType(result));
+                Assert.Equal(2, result.Count());
+            }
+        }
 
-        //        var controller = new DogOwnersController(_context);
+        [Fact]
+        public async Task GetDogOwnerByIdReturnAIActionResultWithDogOwner()
+        {
+            using (var _context = new DbContextCarryDoggyGo(_options))
+            {
 
-        //        //Act
-        //        var result = await controller.Get();
+                //Arrange
+                _context.DogOwners.AddRange(_dogOwners);
+                _context.SaveChanges();
 
-        //        //Assert
-        //        Assert.True(typeof(IEnumerable<DogOwnerModel>).IsInstanceOfType(result));
-        //        Assert.Equal(2, result.Count());
-        //    }
+                var controller = new DogOwnersController(_context);
 
-        //}
+                //Act
+                var result = await controller.Get(1);
 
-        //[Fact]
-        //public async Task GetDogWalkerByIdReturnAIActionResultWithDogWalker()
-        //{
-        //    using (var _context = new DbContextCarryDoggyGo(_options))
-        //    {
-        //        //Arrange
-        //        _context.DogOwners.AddRange(_dogOwners);
-        //        _context.SaveChanges();
+                //Assert
+                Assert.True(typeof(OkObjectResult).IsInstanceOfType(result));
+            }
+        }
 
-        //        var controller = new DogWalkersController(_context);
+        [Fact]
+        public async Task PostDogOwnerReturnAnOkObjectResult()
+        {
+            using (var _context = new DbContextCarryDoggyGo(_options))
+            {
+                //Arrange
+                CreateDogOwnerModel newDogOwner = new CreateDogOwnerModel
+                {
+                    Name = "test",
+                    LastName = "test",
+                    Phone = "987654321",
+                    Email = "test@test.com",
+                    Password = "123456"
+                };
+                var controller = new DogOwnersController(_context);
 
-        //        //Act
-        //        var result = await controller.GetDogWalkerById(1);
+                //Act
+                var result = await controller.PostAsync(newDogOwner);
 
-        //        //Assert
-        //        Assert.True(typeof(OkObjectResult).IsInstanceOfType(result));
-        //    }
-        //}
+                //Assert
+                Assert.True(typeof(OkObjectResult).IsInstanceOfType(result));
+            }
+        }
 
-        //[Fact]
-        //public async Task PostDogWalkerReturnAnOkObjectResult()
-        //{
-        //    using (var _context = new DbContextCarryDoggyGo(_options))
-        //    {
-        //        //Arrange
-        //        CreateDogWalkerModel newDogWalker = new CreateDogWalkerModel
-        //        {
-        //            Name = "test",
-        //            LastName = "test",
-        //            Phone = "987654321",
-        //            Email = "test@test.com",
-        //            Description = "soy una descripcion",
-        //            PaymentAmount = 40
-        //        };
-        //        var controller = new DogWalkersController(_context);
+        [Fact]
+        public async Task PutDogOwnerReturnAnOkObjectResult()
+        {
+            using (var _context = new DbContextCarryDoggyGo(_options))
+            {
+                //Arrange
+                _context.DogOwners.AddRange(_dogOwners);
+                _context.SaveChanges();
+                UpdateDogownerModel updateDogOwner = new UpdateDogownerModel
+                {
+                    Name = "test",
+                    LastName = "test",
+                    Phone = "987654321",
+                    Password = "12345678",
+                };
+                var controller = new DogOwnersController(_context);
 
-        //        //Act
-        //        var result = await controller.PostDogWalker(newDogWalker);
+                //Act
+                var result = await controller.PutDogOwner(1, updateDogOwner);
 
-        //        //Assert
-        //        Assert.True(typeof(OkObjectResult).IsInstanceOfType(result));
-        //    }
-        //}
+                //Assert
+                Assert.True(typeof(OkObjectResult).IsInstanceOfType(result));
+            }
+        }
 
-        //[Fact]
-        //public async Task PutDogWalkerReturnAnOkObjectResult()
-        //{
-        //    using (var _context = new DbContextCarryDoggyGo(_options))
-        //    {
-        //        //Arrange
-        //        _context.DogWalkers.AddRange(_dogWalkers);
-        //        _context.SaveChanges();
-        //        UpdateDogWalkerModel updateDogWalker = new UpdateDogWalkerModel
-        //        {
-        //            Name = "test",
-        //            LastName = "test",
-        //            Phone = "987654321",
-        //            Password = "12345678",
-        //            Description = "soy una descripcion",
-        //            PaymentAmount = 50
-        //        };
-        //        var controller = new DogWalkersController(_context);
+        [Fact]
+        public async Task DeleteDogOwnerReturnAnOkObjectResult()
+        {
+            using (var _context = new DbContextCarryDoggyGo(_options))
+            {
+                //Arrange
+                _context.DogOwners.AddRange(_dogOwners);
+                _context.SaveChanges();
+                var controller = new DogOwnersController(_context);
 
-        //        //Act
-        //        var result = await controller.PutDogWalker(1, updateDogWalker);
+                //Act
+                var result = await controller.Delete(1);
 
-        //        //Assert
-        //        Assert.True(typeof(OkObjectResult).IsInstanceOfType(result));
-        //    }
-        //}
-
-        //[Fact]
-        //public async Task DeleteDogWalkerReturnAnOkObjectResult()
-        //{
-        //    using (var _context = new DbContextCarryDoggyGo(_options))
-        //    {
-        //        //Arrange
-        //        _context.DogWalkers.AddRange(_dogWalkers);
-        //        _context.SaveChanges();
-        //        var controller = new DogWalkersController(_context);
-
-        //        //Act
-        //        var result = await controller.Delete(1);
-
-        //        //Assert
-        //        Assert.True(typeof(OkObjectResult).IsInstanceOfType(result));
-        //    }
-        //}
+                //Assert
+                Assert.True(typeof(OkObjectResult).IsInstanceOfType(result));
+            }
+        }
 
         public List<DogOwner> getDogOwnersSession()
         {

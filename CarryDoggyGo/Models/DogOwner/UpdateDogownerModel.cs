@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarryDoggyGo.Models.DogOwner
 {
-    public class UpdateDogowner
+    public class UpdateDogownerModel
     {
         [Required]
         [StringLength(50, MinimumLength = 2)]
@@ -17,9 +17,6 @@ namespace CarryDoggyGo.Models.DogOwner
         [Required]
         [StringLength(9, MinimumLength = 9)]
         public string Phone { get; set; }
-        [Required]
-        [EmailAddress]
-        public string Email { get; set; }
         [Required]
         [StringLength(20, MinimumLength = 6)]
         public string Password { get; set; }

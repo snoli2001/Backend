@@ -24,11 +24,11 @@ namespace CarryDoggyGo.Controllers
 
         // GET: api/CareItems
         [HttpGet]
-        public async Task<IEnumerable<CaresItem>> GetCareItems()
+        public async Task<IEnumerable<CaresItemModel>> GetCareItems()
         {
             var CareItemList = await _context.CareItems.ToListAsync();
 
-            return CareItemList.Select(d => new CaresItem
+            return CareItemList.Select(d => new CaresItemModel
             {
                 CareItemId = d.CareItemId,
                 Name = d.Name,
@@ -47,7 +47,7 @@ namespace CarryDoggyGo.Controllers
             if (Caresitem == null)
                 return NotFound();
 
-            return Ok(new CaresItem
+            return Ok(new CaresItemModel
             {
                 CareItemId = Caresitem.CareItemId,
                 Name = Caresitem.Name,
@@ -57,7 +57,7 @@ namespace CarryDoggyGo.Controllers
         // PUT: api/CareItems/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutDogWalker(int id, [FromBody] UpdateCareItem model)
+        public async Task<IActionResult> PutCareItem(int id, [FromBody] UpdateCareItemModel model)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -95,7 +95,7 @@ namespace CarryDoggyGo.Controllers
         [HttpPost]
         
 
-        public async Task<IActionResult> PostDogWalker([FromBody] CreateCareitem model)
+        public async Task<IActionResult> PostCareItem([FromBody] CreateCareitemModel model)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);

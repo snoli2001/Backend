@@ -32,6 +32,7 @@ namespace CarryDoggyGo.Controllers
             // dogOwner -> dogOwnerModel
             return dogOwnerList.Select(dogOwner => new DogOwnerModel
             {
+                DogOnwerId = dogOwner.DogOwnerId,
                 Name = dogOwner.Name,
                 LastName = dogOwner.LastName,
                 Phone = dogOwner.Phone,
@@ -42,9 +43,22 @@ namespace CarryDoggyGo.Controllers
 
         // GET api/<DogOwnersController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            return "value";
+            var dogOnwner = await _context.DogOwners.FindAsync(id);
+
+            if (dogOnwner == null)
+                return NotFound();
+
+            return Ok(new DogOwnerModel
+            {
+                DogOnwerId = dogOnwner.DogOwnerId,
+                Name = dogOnwner.Name,
+                LastName = dogOnwner.LastName,
+                Phone = dogOnwner.Phone,
+                Email = dogOnwner.Email,
+             
+            });
         }
 
         // POST api/<DogOwnersController>
@@ -75,14 +89,14 @@ namespace CarryDoggyGo.Controllers
                 return BadRequest(ex.Message);
             }
 
-            return Ok();
+            return Ok(model);
         }
 
         // PUT api/<DogOwnersController>/5
         [HttpPut("{id}")]
 
 
-        public async Task<IActionResult> PutDogOwner(int id, [FromBody] UpdateDogowner model)
+        public async Task<IActionResult> PutDogOwner(int id, [FromBody] UpdateDogownerModel model)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -99,7 +113,6 @@ namespace CarryDoggyGo.Controllers
 
             dogowner.Name = model.Name;
             dogowner.LastName = model.LastName;
-            dogowner.Email = model.Email;
             dogowner.Password = model.Password;
             dogowner.Phone = model.Phone;
             dogowner.Address = model.Address;
@@ -113,7 +126,7 @@ namespace CarryDoggyGo.Controllers
                 return BadRequest(ex.Message);
             }
 
-            return Ok();
+            return Ok(model);
 
 
         }
