@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CarryDoggyGo.Data;
 using CarryDoggyGo.Entities;
+using CarryDoggyGo.Models.NotificationDogWalker;
 
 namespace CarryDoggyGo.Controllers
 {
@@ -23,9 +24,19 @@ namespace CarryDoggyGo.Controllers
 
         // GET: api/NotificationDogWalkers
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<NotificationDogWalker>>> GetNotificationDogWalkers()
+        public async Task<IEnumerable<NotificationDogWalker>> GetNotificationDogWalkers()
         {
-            return await _context.NotificationDogWalkers.ToListAsync();
+            var notificationDogWalkerList = await _context.NotificationDogWalkers.ToListAsync();
+            
+
+            return notificationDogWalkerList.Select(d => new NotificationDogWalker
+            {
+                NotificationDogWalkerId = d.NotificationDogWalkerId,
+                DogWalkerId = d.DogWalkerId,
+                ShippingDate = d.ShippingDate,
+                Description = d.Description,
+                AcceptDeny = d.AcceptDeny
+            });
         }
 
         // GET: api/NotificationDogWalkers/5
@@ -35,69 +46,96 @@ namespace CarryDoggyGo.Controllers
             var notificationDogWalker = await _context.NotificationDogWalkers.FindAsync(id);
 
             if (notificationDogWalker == null)
-            {
                 return NotFound();
-            }
 
-            return notificationDogWalker;
+            return Ok(new NotificationDogWalker
+            {
+                NotificationDogWalkerId = notificationDogWalker.NotificationDogWalkerId,
+                DogWalkerId = notificationDogWalker.DogWalkerId,
+                ShippingDate = notificationDogWalker.ShippingDate,
+                Description = notificationDogWalker.Description,
+                AcceptDeny = notificationDogWalker.AcceptDeny
+            });
         }
 
         // PUT: api/NotificationDogWalkers/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutNotificationDogWalker(int id, NotificationDogWalker notificationDogWalker)
+        public async Task<IActionResult> PutNotificationDogWalker(int id, [FromBody] UpdateNotificationDogWalker model)
         {
-            if (id != notificationDogWalker.NotificationDogWalkerId)
-            {
-                return BadRequest();
-            }
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-            _context.Entry(notificationDogWalker).State = EntityState.Modified;
+            if (id <= 0)
+                return BadRequest();
+
+            var notificationDogWalker = await _context.NotificationDogWalkers.FirstOrDefaultAsync(d => d.NotificationDogWalkerId == id);
+
+            if (notificationDogWalker == null)
+                return NotFound();
+
+            notificationDogWalker.AcceptDeny = model.AcceptDeny;
 
             try
             {
                 await _context.SaveChangesAsync();
             }
-            catch (DbUpdateConcurrencyException)
+            catch (DbUpdateConcurrencyException ex)
             {
-                if (!NotificationDogWalkerExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return BadRequest(ex.Message);
             }
 
-            return NoContent();
+            return Ok(model);
         }
 
         // POST: api/NotificationDogWalkers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<NotificationDogWalker>> PostNotificationDogWalker(NotificationDogWalker notificationDogWalker)
+        public async Task<IActionResult> PostNotificationDogWalker([FromBody] CreateNotificationDogWalkerModel model)
         {
-            _context.NotificationDogWalkers.Add(notificationDogWalker);
-            await _context.SaveChangesAsync();
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-            return CreatedAtAction("GetNotificationDogWalker", new { id = notificationDogWalker.NotificationDogWalkerId }, notificationDogWalker);
+            NotificationDogWalker notificationDogWalker = new NotificationDogWalker
+            {
+                DogWalkerId=model.DogWalkerId,
+                ShippingDate = DateTime.Now,
+                Description = model.Description,
+                AcceptDeny=model.AcceptDeny
+                
+            };
+            _context.NotificationDogWalkers.Add(notificationDogWalker);
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+            return Ok(model);
         }
 
         // DELETE: api/NotificationDogWalkers/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteNotificationDogWalker(int id)
         {
-            var notificationDogWalker = await _context.NotificationDogWalkers.FindAsync(id);
-            if (notificationDogWalker == null)
-            {
+            var existingNotificationDogWalker = await _context.NotificationDogWalkers.FindAsync(id);
+            if (existingNotificationDogWalker == null)
                 return NotFound();
+
+            try
+            {
+                _context.Remove(existingNotificationDogWalker);
+                await _context.SaveChangesAsync();
+
             }
-
-            _context.NotificationDogWalkers.Remove(notificationDogWalker);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            return Ok(existingNotificationDogWalker);
         }
 
         private bool NotificationDogWalkerExists(int id)

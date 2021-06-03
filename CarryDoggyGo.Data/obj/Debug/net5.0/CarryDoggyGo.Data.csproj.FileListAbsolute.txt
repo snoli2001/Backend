@@ -34,3 +34,23 @@ C:\Users\USUARIO\Documents\GitHub\Backend\CarryDoggyGo.Data\obj\Debug\net5.0\Car
 C:\Users\USUARIO\Documents\GitHub\Backend\CarryDoggyGo.Data\obj\Debug\net5.0\ref\CarryDoggyGo.Data.dll
 C:\Users\USUARIO\Documents\GitHub\Backend\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.pdb
 C:\Users\USUARIO\Documents\GitHub\Backend\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.genruntimeconfig.cache
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\bin\Debug\net5.0\CarryDoggyGo.Data.deps.json
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\bin\Debug\net5.0\CarryDoggyGo.Data.runtimeconfig.json
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\bin\Debug\net5.0\CarryDoggyGo.Data.runtimeconfig.dev.json
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\bin\Debug\net5.0\CarryDoggyGo.Data.dll
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\bin\Debug\net5.0\ref\CarryDoggyGo.Data.dll
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\bin\Debug\net5.0\CarryDoggyGo.Data.pdb
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\bin\Debug\net5.0\CarryDoggyGo.Entities.dll
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\bin\Debug\net5.0\CarryDoggyGo.Entities.pdb
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.csprojAssemblyReference.cache
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.AssemblyInfoInputs.cache
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.AssemblyInfo.cs
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.csproj.CoreCompileInputs.cache
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.csproj.CopyComplete
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.dll
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\obj\Debug\net5.0\ref\CarryDoggyGo.Data.dll
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.pdb
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.genruntimeconfig.cache
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\bin\Debug\net5.0\appsettings.json
