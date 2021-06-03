@@ -18,6 +18,8 @@ namespace CarryDoggyGo.Data.Mapping
             builder.Property(u => u.DogId)
                .HasColumnName("dog_id")
                .ValueGeneratedOnAdd();
+            builder.Property(u => u.DogOwnerId)
+              .HasColumnName("dog_owner_id");
 
             builder.Property(u => u.Name)
                 .HasColumnName("name")
