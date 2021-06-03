@@ -14,15 +14,19 @@ namespace CarryDoggyGo.Data.Mapping
         public void Configure(EntityTypeBuilder<NotificationDogWalker> builder)
         {
             builder.ToTable("notification_dogwalker");
-            builder.HasKey(n => n.NotificationDogWalkerID);
+            builder.HasKey(n => n.NotificationDogWalkerId);
 
-            builder.Property(n => n.NotificationDogWalkerID)
+            builder.Property(n => n.NotificationDogWalkerId)
                .HasColumnName("notification_dogwalker_id")
                .ValueGeneratedOnAdd();
 
-            builder.HasOne(n => n.DogWalker)
-               .WithMany(n => n.NotificationDogWalkers)
-               .HasForeignKey(n => n.DogWalkerID);
+            //builder.HasOne(n => n.DogWalker)
+            //   .WithMany(n => n.NotificationDogWalkers)
+            //   .HasForeignKey(n => n.DogWalkerId);
+
+            builder.Property(n => n.DogWalkerId)
+              .HasColumnName("dog_walker_id")
+              .IsRequired();
 
             builder.Property(n => n.ShippingDate)
                .HasColumnName("shipping_date")

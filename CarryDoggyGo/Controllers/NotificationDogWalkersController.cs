@@ -47,7 +47,7 @@ namespace CarryDoggyGo.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutNotificationDogWalker(int id, NotificationDogWalker notificationDogWalker)
         {
-            if (id != notificationDogWalker.NotificationDogWalkerID)
+            if (id != notificationDogWalker.NotificationDogWalkerId)
             {
                 return BadRequest();
             }
@@ -81,7 +81,7 @@ namespace CarryDoggyGo.Controllers
             _context.NotificationDogWalkers.Add(notificationDogWalker);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetNotificationDogWalker", new { id = notificationDogWalker.NotificationDogWalkerID }, notificationDogWalker);
+            return CreatedAtAction("GetNotificationDogWalker", new { id = notificationDogWalker.NotificationDogWalkerId }, notificationDogWalker);
         }
 
         // DELETE: api/NotificationDogWalkers/5
@@ -102,7 +102,7 @@ namespace CarryDoggyGo.Controllers
 
         private bool NotificationDogWalkerExists(int id)
         {
-            return _context.NotificationDogWalkers.Any(e => e.NotificationDogWalkerID == id);
+            return _context.NotificationDogWalkers.Any(e => e.NotificationDogWalkerId == id);
         }
     }
 }

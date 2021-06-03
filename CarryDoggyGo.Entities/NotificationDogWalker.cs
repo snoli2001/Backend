@@ -8,8 +8,8 @@ namespace CarryDoggyGo.Entities
 {
     public class NotificationDogWalker
     {
-        public int NotificationDogWalkerID { get; set; }
-        public int DogWalkerID { get; set; }
+        public int NotificationDogWalkerId { get; set; }
+        public int DogWalkerId { get; set; }
         public DateTime ShippingDate { get; set; }
         public string Description { get; set; }
         public bool? AcceptDeny { get; set; }
