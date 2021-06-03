@@ -4,14 +4,16 @@ using CarryDoggyGo.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CarryDoggyGo.Data.Migrations
 {
     [DbContext(typeof(DbContextCarryDoggyGo))]
-    partial class DbContextCarryDoggyGoModelSnapshot : ModelSnapshot
+    [Migration("20210603213120_NotificationDogWalker")]
+    partial class NotificationDogWalker
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -293,8 +295,7 @@ namespace CarryDoggyGo.Data.Migrations
                         .HasColumnName("description");
 
                     b.Property<int>("DogWalkerId")
-                        .HasColumnType("int")
-                        .HasColumnName("dog_walker_id");
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("ShippingDate")
                         .HasColumnType("datetime2")

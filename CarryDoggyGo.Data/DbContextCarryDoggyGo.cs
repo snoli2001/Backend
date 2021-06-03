@@ -19,9 +19,7 @@ namespace CarryDoggyGo.Data
         public DbSet<Dog> Dogs{ get; set; }
         public DbSet<DogCareItem> DogCareItems{ get; set; }
         public DbSet<CareItem> CareItems{ get; set; }
-        //by gsinuiri
-        public DbSet<DogOwnerNotification> DogOwnerNotifications { get; set; }
-
+        public DbSet<NotificationDogWalker> NotificationDogWalkers { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -30,8 +28,8 @@ namespace CarryDoggyGo.Data
             modelBuilder.ApplyConfiguration(new DogCareItemMap());
             modelBuilder.ApplyConfiguration(new DogMap());
             modelBuilder.ApplyConfiguration(new CareItemMap());
-            //by gsinuiri
-            modelBuilder.ApplyConfiguration(new DogOwnerNotificatoinMap());
+            modelBuilder.ApplyConfiguration(new NotificationDogWalkerMap());
+
         }
     }
 }
