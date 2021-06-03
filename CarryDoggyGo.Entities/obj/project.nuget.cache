@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hWl4mkidYvOYLqUnTc4aUVYwaKTlSxp6uEkhHFySjY/VNwaEXPDfzTmyGEwok+6XGwAFsqr/N21v8cqI1Uy9wQ==",
+  "dgSpecHash": "+e7aKSu63UcE50rd+haSSuA1/kg1na17X0IIwdQPGACWBrKD9u9ITzJAvCCkbckA/rb943EXvhrBsSRvcwWqXA==",
   "success": true,
-  "projectFilePath": "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
+  "projectFilePath": "C:\\Users\\USUARIO\\Documents\\GitHub\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
