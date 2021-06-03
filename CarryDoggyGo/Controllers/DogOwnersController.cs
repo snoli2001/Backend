@@ -1,5 +1,6 @@
 ﻿using CarryDoggyGo.Data;
 using CarryDoggyGo.Entities;
+using CarryDoggyGo.Models.Dog;
 using CarryDoggyGo.Models.DogOwner;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -43,7 +44,7 @@ namespace CarryDoggyGo.Controllers
 
         // GET api/<DogOwnersController>/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(int id)
+        public async Task<IActionResult> GetById(int id)
         {
             var dogOnwner = await _context.DogOwners.FindAsync(id);
 
@@ -60,6 +61,7 @@ namespace CarryDoggyGo.Controllers
              
             });
         }
+     
 
         // POST api/<DogOwnersController>
         [HttpPost]
@@ -92,10 +94,11 @@ namespace CarryDoggyGo.Controllers
             return Ok(model);
         }
 
+      
+      
+
         // PUT api/<DogOwnersController>/5
         [HttpPut("{id}")]
-
-
         public async Task<IActionResult> PutDogOwner(int id, [FromBody] UpdateDogownerModel model)
         {
             if (!ModelState.IsValid)
