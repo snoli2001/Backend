@@ -13,9 +13,10 @@ namespace CarryDoggyGo.Entities
         public string Race { get; set; }
         public string Description { get; set; }
         public string Diseases { get; set; }
-        public int DogOwnerId { get; set; }
 
+        public int DogOwnerId { get; set; }
         public virtual DogOwner DogOwner { get; set; }
+
         public string MedicalInformation { get; set; }
         public virtual ICollection<DogCareItem> DogCareItems{get; set;}
     }

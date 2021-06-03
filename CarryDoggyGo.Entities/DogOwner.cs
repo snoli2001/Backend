@@ -9,10 +9,11 @@ namespace CarryDoggyGo.Entities
     public  class DogOwner: User
     {
         public int DogOwnerId { get; set; }
-
         public string Address { get; set; }
+
         public virtual ICollection<Dog> Dogs { get; set; }
         public virtual ICollection<DogWalk> DogWalks { get; set; }
-
+        //by gsinuiri
+        public virtual ICollection<DogOwnerNotification> DogOwnerNotifications { get; set; }
     }
 }
