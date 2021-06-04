@@ -24,14 +24,17 @@ namespace CarryDoggyGo.Data.Mapping
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .IsRequired();
+
             builder.Property(u => u.MedicalInformation)
                 .HasColumnName("medical_information");
             builder.Property(u => u.Race)
               .HasColumnName("race");
+
             builder.Property(dw => dw.Description)
               .HasColumnName("description")
               .HasMaxLength(500)
               .IsUnicode(false);
+
             builder.Property(dw => dw.Diseases)
                  .HasColumnName("diseases")
                 .HasMaxLength(500)

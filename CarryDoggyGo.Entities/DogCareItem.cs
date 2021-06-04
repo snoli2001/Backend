@@ -10,6 +10,7 @@ namespace CarryDoggyGo.Entities
     {
         public int DogId { get; set; }
         public virtual Dog Dog{ get; set; }
+
         public int CareItemId{ get; set; }
         public virtual CareItem CareItem{ get; set; }
     }

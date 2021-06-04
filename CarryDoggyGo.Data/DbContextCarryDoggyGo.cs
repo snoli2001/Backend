@@ -33,6 +33,5 @@ namespace CarryDoggyGo.Data
             modelBuilder.ApplyConfiguration(new CalificationMap());
             modelBuilder.ApplyConfiguration(new NotificationDogWalkerMap());
         }
-
     }
 }
