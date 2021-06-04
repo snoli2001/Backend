@@ -1,25 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj": {}
+    "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj": {
+    "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
+        "projectUniqueName": "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
         "projectName": "CarryDoggyGo.Entities",
-        "projectPath": "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
-        "packagesPath": "C:\\Users\\giuse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo.Entities\\obj\\",
+        "projectPath": "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
+        "packagesPath": "C:\\Users\\NOLI\\.nuget\\packages\\",
+        "outputPath": "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\giuse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\NOLI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"

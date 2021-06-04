@@ -20,8 +20,6 @@ namespace CarryDoggyGo.Data
         public DbSet<DogCareItem> DogCareItems{ get; set; }
         public DbSet<CareItem> CareItems{ get; set; }
 
-        public DbSet<Calification> Calification { get; set; }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -30,7 +28,7 @@ namespace CarryDoggyGo.Data
             modelBuilder.ApplyConfiguration(new DogCareItemMap());
             modelBuilder.ApplyConfiguration(new DogMap());
             modelBuilder.ApplyConfiguration(new CareItemMap());
-            modelBuilder.ApplyConfiguration(new CalificationMap());
+
         }
 
     }

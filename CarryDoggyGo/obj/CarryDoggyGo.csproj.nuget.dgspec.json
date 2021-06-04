@@ -1,25 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo\\CarryDoggyGo.csproj": {}
+    "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo\\CarryDoggyGo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo.Data\\CarryDoggyGo.Data.csproj": {
+    "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo.Data\\CarryDoggyGo.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo.Data\\CarryDoggyGo.Data.csproj",
+        "projectUniqueName": "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo.Data\\CarryDoggyGo.Data.csproj",
         "projectName": "CarryDoggyGo.Data",
-        "projectPath": "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo.Data\\CarryDoggyGo.Data.csproj",
-        "packagesPath": "C:\\Users\\giuse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo.Data\\obj\\",
+        "projectPath": "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo.Data\\CarryDoggyGo.Data.csproj",
+        "packagesPath": "C:\\Users\\NOLI\\.nuget\\packages\\",
+        "outputPath": "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\giuse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\NOLI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -32,8 +35,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj": {
-                "projectPath": "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj"
+              "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj": {
+                "projectPath": "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj"
               }
             }
           }
@@ -56,7 +59,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.5, )"
+              "version": "[5.0.4, )"
             }
           },
           "imports": [
@@ -78,22 +81,25 @@
         }
       }
     },
-    "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj": {
+    "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
+        "projectUniqueName": "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
         "projectName": "CarryDoggyGo.Entities",
-        "projectPath": "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
-        "packagesPath": "C:\\Users\\giuse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo.Entities\\obj\\",
+        "projectPath": "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
+        "packagesPath": "C:\\Users\\NOLI\\.nuget\\packages\\",
+        "outputPath": "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\giuse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\NOLI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -136,22 +142,25 @@
         }
       }
     },
-    "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo\\CarryDoggyGo.csproj": {
+    "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo\\CarryDoggyGo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo\\CarryDoggyGo.csproj",
+        "projectUniqueName": "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo\\CarryDoggyGo.csproj",
         "projectName": "CarryDoggyGo",
-        "projectPath": "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo\\CarryDoggyGo.csproj",
-        "packagesPath": "C:\\Users\\giuse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo\\obj\\",
+        "projectPath": "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo\\CarryDoggyGo.csproj",
+        "packagesPath": "C:\\Users\\NOLI\\.nuget\\packages\\",
+        "outputPath": "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\giuse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\NOLI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -164,11 +173,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo.Data\\CarryDoggyGo.Data.csproj": {
-                "projectPath": "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo.Data\\CarryDoggyGo.Data.csproj"
+              "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo.Data\\CarryDoggyGo.Data.csproj": {
+                "projectPath": "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo.Data\\CarryDoggyGo.Data.csproj"
               },
-              "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj": {
-                "projectPath": "C:\\Users\\giuse\\OneDrive\\Documentos Giusen\\Trabajo Aplicaciones\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj"
+              "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj": {
+                "projectPath": "E:\\2021-01\\Aplicaciones Web\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj"
               }
             }
           }
@@ -193,17 +202,13 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.6, )"
+              "version": "[5.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.6, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[5.0.4, )"
             },
             "Moq": {
               "target": "Package",
