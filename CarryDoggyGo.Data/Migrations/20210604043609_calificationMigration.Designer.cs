@@ -4,19 +4,21 @@ using CarryDoggyGo.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CarryDoggyGo.Data.Migrations
 {
     [DbContext(typeof(DbContextCarryDoggyGo))]
-    partial class DbContextCarryDoggyGoModelSnapshot : ModelSnapshot
+    [Migration("20210604043609_calificationMigration")]
+    partial class calificationMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.6")
+                .HasAnnotation("ProductVersion", "5.0.5")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("CarryDoggyGo.Entities.Calification", b =>
@@ -295,42 +297,6 @@ namespace CarryDoggyGo.Data.Migrations
                     b.ToTable("dog_walkers");
                 });
 
-            modelBuilder.Entity("CarryDoggyGo.Entities.NotificationDogWalker", b =>
-                {
-                    b.Property<int>("NotificationDogWalkerId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("notification_dogwalker_id")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool?>("AcceptDeny")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasColumnName("accept_deny")
-                        .HasDefaultValueSql("((0))");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(500)")
-                        .HasColumnName("description");
-
-                    b.Property<int>("DogWalkerId")
-                        .HasColumnType("int")
-                        .HasColumnName("dog_walker_id");
-
-                    b.Property<DateTime>("ShippingDate")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("shipping_date");
-
-                    b.HasKey("NotificationDogWalkerId");
-
-                    b.HasIndex("DogWalkerId");
-
-                    b.ToTable("notification_dogwalker");
-                });
-
             modelBuilder.Entity("CarryDoggyGo.Entities.Dog", b =>
                 {
                     b.HasOne("CarryDoggyGo.Entities.DogOwner", "DogOwner")
@@ -380,17 +346,6 @@ namespace CarryDoggyGo.Data.Migrations
                     b.Navigation("DogWalker");
                 });
 
-            modelBuilder.Entity("CarryDoggyGo.Entities.NotificationDogWalker", b =>
-                {
-                    b.HasOne("CarryDoggyGo.Entities.DogWalker", "DogWalker")
-                        .WithMany("NotificationDogWalkers")
-                        .HasForeignKey("DogWalkerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("DogWalker");
-                });
-
             modelBuilder.Entity("CarryDoggyGo.Entities.CareItem", b =>
                 {
                     b.Navigation("DogCareItems");
@@ -411,8 +366,6 @@ namespace CarryDoggyGo.Data.Migrations
             modelBuilder.Entity("CarryDoggyGo.Entities.DogWalker", b =>
                 {
                     b.Navigation("DogWalks");
-
-                    b.Navigation("NotificationDogWalkers");
                 });
 #pragma warning restore 612, 618
         }

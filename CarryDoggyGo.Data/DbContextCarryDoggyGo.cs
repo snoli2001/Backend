@@ -19,7 +19,9 @@ namespace CarryDoggyGo.Data
         public DbSet<Dog> Dogs{ get; set; }
         public DbSet<DogCareItem> DogCareItems{ get; set; }
         public DbSet<CareItem> CareItems{ get; set; }
+        public DbSet<Calification> Calification { get; set; }
         public DbSet<NotificationDogWalker> NotificationDogWalkers { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -28,8 +30,8 @@ namespace CarryDoggyGo.Data
             modelBuilder.ApplyConfiguration(new DogCareItemMap());
             modelBuilder.ApplyConfiguration(new DogMap());
             modelBuilder.ApplyConfiguration(new CareItemMap());
+            modelBuilder.ApplyConfiguration(new CalificationMap());
             modelBuilder.ApplyConfiguration(new NotificationDogWalkerMap());
-
         }
 
     }
