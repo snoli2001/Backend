@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PERSONAL\\Desktop\\cursos\\2021-1\\Ap web\\trabajo\\Backend\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj": {}
+    "C:\\Users\\USUARIO\\Documents\\GitHub\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PERSONAL\\Desktop\\cursos\\2021-1\\Ap web\\trabajo\\Backend\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj": {
+    "C:\\Users\\USUARIO\\Documents\\GitHub\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PERSONAL\\Desktop\\cursos\\2021-1\\Ap web\\trabajo\\Backend\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\USUARIO\\Documents\\GitHub\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
         "projectName": "CarryDoggyGo.Entities",
-        "projectPath": "C:\\Users\\PERSONAL\\Desktop\\cursos\\2021-1\\Ap web\\trabajo\\Backend\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
-        "packagesPath": "C:\\Users\\PERSONAL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PERSONAL\\Desktop\\cursos\\2021-1\\Ap web\\trabajo\\Backend\\Backend\\CarryDoggyGo.Entities\\obj\\",
+        "projectPath": "C:\\Users\\USUARIO\\Documents\\GitHub\\Backend\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
+        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USUARIO\\Documents\\GitHub\\Backend\\CarryDoggyGo.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PERSONAL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
