@@ -57,7 +57,7 @@ namespace CarryDoggyGoTesting
                 var controller = new DogOwnersController(_context);
 
                 //Act
-                var result = await controller.Get(1);
+                var result = await controller.GetById(1);
 
                 //Assert
                 Assert.True(typeof(OkObjectResult).IsInstanceOfType(result));
