@@ -21,6 +21,7 @@ namespace CarryDoggyGo.Data
         public DbSet<CareItem> CareItems{ get; set; }
         public DbSet<Calification> Calification { get; set; }
         public DbSet<NotificationDogWalker> NotificationDogWalkers { get; set; }
+        public DbSet<DogOwnerNotification> DogOwnerNotifications { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
