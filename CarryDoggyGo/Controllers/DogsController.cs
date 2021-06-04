@@ -63,14 +63,60 @@ namespace CarryDoggyGo.Controllers
        
         // PUT api/<DogsController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<IActionResult> PutDog(int id, [FromBody] UpdateDogModel model)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            if (id <= 0)
+                return BadRequest();
+
+            var dog = await _context.Dogs.FirstOrDefaultAsync(d => d.DogId == id);
+
+            if (dog == null)
+                return NotFound();
+
+
+
+            dog.Name = model.Name;
+            dog.Race = model.Race;
+            dog.Description = model.Description;
+            dog.Diseases = model.Diseases;
+            dog.MedicalInformation = model.MedicalInformation;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+            return Ok(model);
+
+
         }
 
         // DELETE api/<DogsController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
+            var existingDog= await _context.Dogs.FindAsync(id);
+            if (existingDog== null)
+                return NotFound();
+
+            try
+            {
+                _context.Remove(existingDog);
+                await _context.SaveChangesAsync();
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            return Ok(existingDog);
         }
     }
 }
