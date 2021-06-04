@@ -22,3 +22,15 @@ C:\Users\USUARIO\Documents\GitHub\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0
 C:\Users\USUARIO\Documents\GitHub\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.dll
 C:\Users\USUARIO\Documents\GitHub\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0\ref\CarryDoggyGo.Entities.dll
 C:\Users\USUARIO\Documents\GitHub\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.pdb
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Entities\bin\Debug\net5.0\CarryDoggyGo.Entities.deps.json
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Entities\bin\Debug\net5.0\CarryDoggyGo.Entities.dll
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Entities\bin\Debug\net5.0\ref\CarryDoggyGo.Entities.dll
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Entities\bin\Debug\net5.0\CarryDoggyGo.Entities.pdb
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.csprojAssemblyReference.cache
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.AssemblyInfoInputs.cache
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.AssemblyInfo.cs
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.csproj.CoreCompileInputs.cache
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.dll
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0\ref\CarryDoggyGo.Entities.dll
+C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.pdb
