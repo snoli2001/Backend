@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 
 namespace CarryDoggyGo.Data.Mapping
 {
-    class CalificationMap : IEntityTypeConfiguration<Calification>
+    class QualificationMap : IEntityTypeConfiguration<Qualification>
     {
 
-        public void Configure(EntityTypeBuilder<Calification> builder)
+        public void Configure(EntityTypeBuilder<Qualification> builder)
         {
 
-            builder.ToTable("calification");
-            builder.HasKey(u => u.CalificationId);
-            builder.Property(u => u.CalificationId)
-               .HasColumnName("calification_id")
+            builder.ToTable("qualification");
+            builder.HasKey(u => u.QualificationId);
+            builder.Property(u => u.QualificationId)
+               .HasColumnName("qualification_id")
                .ValueGeneratedOnAdd();
             builder.Property(dw => dw.Starts)
              .HasColumnName("starts").IsUnicode(false).IsRequired();

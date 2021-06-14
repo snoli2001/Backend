@@ -60,8 +60,8 @@ namespace CarryDoggyGo.Data.Mapping
             builder.Property(dw => dw.PaymentAmount)
                .HasColumnName("payment_amount")
                .IsUnicode(false);
-            builder.Property(dw => dw.Calification)
-              .HasColumnName("calification");
+            builder.Property(dw => dw.Qualification)
+              .HasColumnName("Qualification");
             builder.HasMany(dw => dw.DogWalks)
                     .WithOne(dw => dw.DogWalker)
                     .HasForeignKey(dw => dw.DogWalkerId);
