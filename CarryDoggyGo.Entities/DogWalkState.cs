@@ -1,7 +1,10 @@
-﻿public enum DogWalkState
+﻿namespace CarryDoggyGo.Entities
 {
-    TO_START,
-    IN_PROGRESS,
-    FINISHED,
-    CANCELED,
+    public enum DogWalkState
+    {
+        TO_START,
+        IN_PROGRESS,
+        FINISHED,
+        CANCELED,
+    }
 }
