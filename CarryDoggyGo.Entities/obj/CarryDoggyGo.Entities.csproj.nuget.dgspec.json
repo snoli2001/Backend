@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Github\\upc2021-1\\appweb\\140621-2\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj": {}
+    "C:\\Users\\USUARIO\\Documents\\GitHub\\ServerSide\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj": {}
   },
   "projects": {
-    "D:\\Github\\upc2021-1\\appweb\\140621-2\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj": {
+    "C:\\Users\\USUARIO\\Documents\\GitHub\\ServerSide\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Github\\upc2021-1\\appweb\\140621-2\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\USUARIO\\Documents\\GitHub\\ServerSide\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
         "projectName": "CarryDoggyGo.Entities",
-        "projectPath": "D:\\Github\\upc2021-1\\appweb\\140621-2\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
-        "packagesPath": "C:\\Users\\Giancarlo\\.nuget\\packages\\",
-        "outputPath": "D:\\Github\\upc2021-1\\appweb\\140621-2\\CarryDoggyGo.Entities\\obj\\",
+        "projectPath": "C:\\Users\\USUARIO\\Documents\\GitHub\\ServerSide\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
+        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USUARIO\\Documents\\GitHub\\ServerSide\\CarryDoggyGo.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Giancarlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
