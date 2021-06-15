@@ -58,3 +58,15 @@ C:\Users\USUARIO\Documents\GitHub\ServerSide\CarryDoggyGo.Entities\obj\Debug\net
 C:\Users\USUARIO\Documents\GitHub\ServerSide\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.dll
 C:\Users\USUARIO\Documents\GitHub\ServerSide\CarryDoggyGo.Entities\obj\Debug\net5.0\ref\CarryDoggyGo.Entities.dll
 C:\Users\USUARIO\Documents\GitHub\ServerSide\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.pdb
+D:\Github\upc2021-1\appweb\prueba\CarryDoggyGo.Entities\bin\Debug\net5.0\CarryDoggyGo.Entities.deps.json
+D:\Github\upc2021-1\appweb\prueba\CarryDoggyGo.Entities\bin\Debug\net5.0\CarryDoggyGo.Entities.dll
+D:\Github\upc2021-1\appweb\prueba\CarryDoggyGo.Entities\bin\Debug\net5.0\ref\CarryDoggyGo.Entities.dll
+D:\Github\upc2021-1\appweb\prueba\CarryDoggyGo.Entities\bin\Debug\net5.0\CarryDoggyGo.Entities.pdb
+D:\Github\upc2021-1\appweb\prueba\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.csprojAssemblyReference.cache
+D:\Github\upc2021-1\appweb\prueba\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\upc2021-1\appweb\prueba\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.AssemblyInfoInputs.cache
+D:\Github\upc2021-1\appweb\prueba\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.AssemblyInfo.cs
+D:\Github\upc2021-1\appweb\prueba\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.csproj.CoreCompileInputs.cache
+D:\Github\upc2021-1\appweb\prueba\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.dll
+D:\Github\upc2021-1\appweb\prueba\CarryDoggyGo.Entities\obj\Debug\net5.0\ref\CarryDoggyGo.Entities.dll
+D:\Github\upc2021-1\appweb\prueba\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.pdb
