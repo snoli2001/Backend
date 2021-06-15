@@ -26,7 +26,7 @@ namespace CarryDoggyGo.Data
         public DbSet<DogWalk> DogWalks { get; set; }
         public DbSet<PaymentType> PaymentTypes { get; set; }
         public DbSet<Report> Reports { get; set; }
-
+        public DbSet<Message> Messages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -43,7 +43,7 @@ namespace CarryDoggyGo.Data
             modelBuilder.ApplyConfiguration(new DogWalkMap());
             modelBuilder.ApplyConfiguration(new PaymentTypeMap());
             modelBuilder.ApplyConfiguration(new ReportMap());
-
+            modelBuilder.ApplyConfiguration(new MessageMap());
         }
     }
 }
