@@ -9786,11 +9786,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Github\\upc2021-1\\appweb\\prueba\\CarryDoggyGo\\CarryDoggyGo.csproj",
+      "projectUniqueName": "D:\\Github\\upc2021-1\\appweb\\140621-2\\CarryDoggyGo\\CarryDoggyGo.csproj",
       "projectName": "CarryDoggyGo",
-      "projectPath": "D:\\Github\\upc2021-1\\appweb\\prueba\\CarryDoggyGo\\CarryDoggyGo.csproj",
+      "projectPath": "D:\\Github\\upc2021-1\\appweb\\140621-2\\CarryDoggyGo\\CarryDoggyGo.csproj",
       "packagesPath": "C:\\Users\\Giancarlo\\.nuget\\packages\\",
-      "outputPath": "D:\\Github\\upc2021-1\\appweb\\prueba\\CarryDoggyGo\\obj\\",
+      "outputPath": "D:\\Github\\upc2021-1\\appweb\\140621-2\\CarryDoggyGo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Giancarlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9807,11 +9807,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Github\\upc2021-1\\appweb\\prueba\\CarryDoggyGo.Data\\CarryDoggyGo.Data.csproj": {
-              "projectPath": "D:\\Github\\upc2021-1\\appweb\\prueba\\CarryDoggyGo.Data\\CarryDoggyGo.Data.csproj"
+            "D:\\Github\\upc2021-1\\appweb\\140621-2\\CarryDoggyGo.Data\\CarryDoggyGo.Data.csproj": {
+              "projectPath": "D:\\Github\\upc2021-1\\appweb\\140621-2\\CarryDoggyGo.Data\\CarryDoggyGo.Data.csproj"
             },
-            "D:\\Github\\upc2021-1\\appweb\\prueba\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj": {
-              "projectPath": "D:\\Github\\upc2021-1\\appweb\\prueba\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj"
+            "D:\\Github\\upc2021-1\\appweb\\140621-2\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj": {
+              "projectPath": "D:\\Github\\upc2021-1\\appweb\\140621-2\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj"
             }
           }
         }

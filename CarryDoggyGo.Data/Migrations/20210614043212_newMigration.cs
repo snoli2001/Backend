@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CarryDoggyGo.Data.Migrations
 {
-    public partial class AgainMigration : Migration
+    public partial class newMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -19,32 +19,6 @@ namespace CarryDoggyGo.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_care_item", x => x.care_item_id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "cities",
-                columns: table => new
-                {
-                    city_id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    name = table.Column<string>(type: "varchar(50)", unicode: false, maxLength: 50, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_cities", x => x.city_id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "districts",
-                columns: table => new
-                {
-                    district_id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    name = table.Column<string>(type: "varchar(50)", unicode: false, maxLength: 50, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_districts", x => x.district_id);
                 });
 
             migrationBuilder.CreateTable(
@@ -87,48 +61,6 @@ namespace CarryDoggyGo.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_dog_walkers", x => x.dog_walker_id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "PaymentTypes",
-                columns: table => new
-                {
-                    PaymentTypeId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "varchar(30)", unicode: false, maxLength: 30, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_PaymentTypes", x => x.PaymentTypeId);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "locations",
-                columns: table => new
-                {
-                    location_id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    address = table.Column<string>(type: "varchar(500)", unicode: false, maxLength: 500, nullable: false),
-                    position_x = table.Column<int>(type: "int", nullable: false),
-                    position_y = table.Column<int>(type: "int", nullable: false),
-                    district_id = table.Column<int>(type: "int", nullable: false),
-                    city_id = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_locations", x => x.location_id);
-                    table.ForeignKey(
-                        name: "FK_city_id",
-                        column: x => x.city_id,
-                        principalTable: "cities",
-                        principalColumn: "city_id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_district_id",
-                        column: x => x.district_id,
-                        principalTable: "districts",
-                        principalColumn: "district_id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -177,6 +109,38 @@ namespace CarryDoggyGo.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "dog_walk",
+                columns: table => new
+                {
+                    dog_walk_id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    hours = table.Column<int>(type: "int", nullable: false),
+                    aditional_information = table.Column<string>(type: "varchar(500)", unicode: false, maxLength: 500, nullable: true),
+                    payment_amount = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DogWalkerId = table.Column<int>(type: "int", nullable: false),
+                    DogOwnerId = table.Column<int>(type: "int", nullable: false),
+                    QualificationId = table.Column<int>(type: "int", nullable: false),
+                    date = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    address = table.Column<string>(type: "varchar(500)", unicode: false, maxLength: 500, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_dog_walk", x => x.dog_walk_id);
+                    table.ForeignKey(
+                        name: "FK_dog_walk_dog_owners_DogOwnerId",
+                        column: x => x.DogOwnerId,
+                        principalTable: "dog_owners",
+                        principalColumn: "dog_owner_id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_dog_walk_dog_walkers_DogWalkerId",
+                        column: x => x.DogWalkerId,
+                        principalTable: "dog_walkers",
+                        principalColumn: "dog_walker_id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "notification_dogwalker",
                 columns: table => new
                 {
@@ -195,46 +159,6 @@ namespace CarryDoggyGo.Data.Migrations
                         column: x => x.dog_walker_id,
                         principalTable: "dog_walkers",
                         principalColumn: "dog_walker_id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "dog_walk",
-                columns: table => new
-                {
-                    dog_walk_id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    hours = table.Column<int>(type: "int", nullable: false),
-                    aditional_information = table.Column<string>(type: "varchar(500)", unicode: false, maxLength: 500, nullable: true),
-                    payment_amount = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DogWalkerId = table.Column<int>(type: "int", nullable: false),
-                    DogOwnerId = table.Column<int>(type: "int", nullable: false),
-                    QualificationId = table.Column<int>(type: "int", nullable: false),
-                    date = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    address = table.Column<string>(type: "varchar(500)", unicode: false, maxLength: 500, nullable: true),
-                    state = table.Column<int>(type: "int", nullable: false),
-                    PaymentTypeId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_dog_walk", x => x.dog_walk_id);
-                    table.ForeignKey(
-                        name: "FK_dog_walk_dog_owners_DogOwnerId",
-                        column: x => x.DogOwnerId,
-                        principalTable: "dog_owners",
-                        principalColumn: "dog_owner_id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_dog_walk_dog_walkers_DogWalkerId",
-                        column: x => x.DogWalkerId,
-                        principalTable: "dog_walkers",
-                        principalColumn: "dog_walker_id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_dog_walk_PaymentTypes_PaymentTypeId",
-                        column: x => x.PaymentTypeId,
-                        principalTable: "PaymentTypes",
-                        principalColumn: "PaymentTypeId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -287,31 +211,6 @@ namespace CarryDoggyGo.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "dogwalk_location",
-                columns: table => new
-                {
-                    dogwalk_id = table.Column<int>(type: "int", nullable: false),
-                    location_id = table.Column<int>(type: "int", nullable: false),
-                    date_register = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_dogwalk_location", x => new { x.dogwalk_id, x.location_id });
-                    table.ForeignKey(
-                        name: "FK_dogwalk_id",
-                        column: x => x.dogwalk_id,
-                        principalTable: "dog_walk",
-                        principalColumn: "dog_walk_id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_location_id",
-                        column: x => x.location_id,
-                        principalTable: "locations",
-                        principalColumn: "location_id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "qualification",
                 columns: table => new
                 {
@@ -326,26 +225,6 @@ namespace CarryDoggyGo.Data.Migrations
                     table.PrimaryKey("PK_qualification", x => x.qualification_id);
                     table.ForeignKey(
                         name: "FK_qualification_dog_walk_DogWalkId",
-                        column: x => x.DogWalkId,
-                        principalTable: "dog_walk",
-                        principalColumn: "dog_walk_id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Reports",
-                columns: table => new
-                {
-                    ReportId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Description = table.Column<string>(type: "varchar(300)", unicode: false, maxLength: 300, nullable: false),
-                    DogWalkId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Reports", x => x.ReportId);
-                    table.ForeignKey(
-                        name: "FK_Reports_dog_walk_DogWalkId",
                         column: x => x.DogWalkId,
                         principalTable: "dog_walk",
                         principalColumn: "dog_walk_id",
@@ -368,11 +247,6 @@ namespace CarryDoggyGo.Data.Migrations
                 column: "DogWalkerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_dog_walk_PaymentTypeId",
-                table: "dog_walk",
-                column: "PaymentTypeId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_dog_walk_dog_dog_walk_id",
                 table: "dog_walk_dog",
                 column: "dog_walk_id");
@@ -388,21 +262,6 @@ namespace CarryDoggyGo.Data.Migrations
                 column: "DogOwnerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_dogwalk_location_location_id",
-                table: "dogwalk_location",
-                column: "location_id");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_locations_city_id",
-                table: "locations",
-                column: "city_id");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_locations_district_id",
-                table: "locations",
-                column: "district_id");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_notification_dogwalker_dog_walker_id",
                 table: "notification_dogwalker",
                 column: "dog_walker_id");
@@ -412,11 +271,6 @@ namespace CarryDoggyGo.Data.Migrations
                 table: "qualification",
                 column: "DogWalkId",
                 unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Reports_DogWalkId",
-                table: "Reports",
-                column: "DogWalkId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -431,16 +285,10 @@ namespace CarryDoggyGo.Data.Migrations
                 name: "DogOwnerNotifications");
 
             migrationBuilder.DropTable(
-                name: "dogwalk_location");
-
-            migrationBuilder.DropTable(
                 name: "notification_dogwalker");
 
             migrationBuilder.DropTable(
                 name: "qualification");
-
-            migrationBuilder.DropTable(
-                name: "Reports");
 
             migrationBuilder.DropTable(
                 name: "care_item");
@@ -449,25 +297,13 @@ namespace CarryDoggyGo.Data.Migrations
                 name: "dogs");
 
             migrationBuilder.DropTable(
-                name: "locations");
-
-            migrationBuilder.DropTable(
                 name: "dog_walk");
-
-            migrationBuilder.DropTable(
-                name: "cities");
-
-            migrationBuilder.DropTable(
-                name: "districts");
 
             migrationBuilder.DropTable(
                 name: "dog_owners");
 
             migrationBuilder.DropTable(
                 name: "dog_walkers");
-
-            migrationBuilder.DropTable(
-                name: "PaymentTypes");
         }
     }
 }
