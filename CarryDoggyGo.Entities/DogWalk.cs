@@ -23,5 +23,8 @@ namespace CarryDoggyGo.Entities
         public virtual ICollection<DogWalkDog> DogWalkDogs { get; set; }
         public DogWalkState state { get; set; }
 
+        //by gsinuiri
+        public int PaymentTypeId { get; set; }
+        public virtual PaymentType PaymentType { get; set; }
     }
 }

@@ -49,6 +49,12 @@ namespace CarryDoggyGo.Data.Mapping
                 .HasForeignKey(u => u.DogOwnerId)
                 .IsRequired();
 
+            //by gsinuiri
+            builder.HasOne(u => u.PaymentType)
+                .WithMany(u => u.DogWalks)
+                .HasForeignKey(u => u.PaymentTypeId)
+                .IsRequired();
+
             builder.Property(u => u.Date)
                 .HasColumnName("date")
                 .IsRequired();
