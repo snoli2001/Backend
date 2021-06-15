@@ -20,7 +20,19 @@ namespace CarryDoggyGo.Entities
         public virtual DogOwner DogOwner { get; set; }
         public DateTime Date { get; set; }
         public string Address { get; set; }
+<<<<<<< HEAD
        
           
+=======
+        public virtual ICollection<DogWalkDog> DogWalkDogs { get; set; }
+        public DogWalkState state { get; set; }
+
+        //by gsinuiri
+        public int PaymentTypeId { get; set; }
+        public virtual PaymentType PaymentType { get; set; }
+
+        public virtual ICollection<Report> Reports { get; set; }
+        public virtual ICollection<Message> Messages { get; set; }
+>>>>>>> 57af56379dc85de6637959f328a30cf5f42855e5
     }
 }

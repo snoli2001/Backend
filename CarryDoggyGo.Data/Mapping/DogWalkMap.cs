@@ -66,6 +66,21 @@ namespace CarryDoggyGo.Data.Mapping
                 .HasMaxLength(500)
                 .IsUnicode(false);
 
+            //by gsinuiri
+            builder.HasOne(u => u.PaymentType)
+                .WithMany(u => u.DogWalks)
+                .HasForeignKey(u => u.PaymentTypeId)
+                .IsRequired();
+
+            //by gsinuiri
+            builder.HasMany(dw => dw.Reports)
+                    .WithOne(dw => dw.DogWalk)
+                    .HasForeignKey(dw => dw.DogWalkId);
+
+            //by gsinuiri
+            builder.HasMany(dw => dw.Messages)
+                    .WithOne(dw => dw.DogWalk)
+                    .HasForeignKey(dw => dw.DogWalkId);
         }
     }
 }

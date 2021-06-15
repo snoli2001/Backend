@@ -53,15 +53,24 @@ namespace CarryDoggyGo.Data.Mapping
             builder.Property(u => u.RegisterDate)
                 .HasColumnName("resgister_at")
                 .IsRequired();
+
             builder.Property(dw => dw.Description)
                .HasColumnName("description")
                .HasMaxLength(500)
                .IsUnicode(false);
+
             builder.Property(dw => dw.PaymentAmount)
                .HasColumnName("payment_amount")
                .IsUnicode(false);
+<<<<<<< HEAD
             builder.Property(dw => dw.Calification)
               .HasColumnName("calification");
+=======
+
+            builder.Property(dw => dw.Qualification)
+              .HasColumnName("Qualification");
+
+>>>>>>> 57af56379dc85de6637959f328a30cf5f42855e5
             builder.HasMany(dw => dw.DogWalks)
                     .WithOne(dw => dw.DogWalker)
                     .HasForeignKey(dw => dw.DogWalkerId);

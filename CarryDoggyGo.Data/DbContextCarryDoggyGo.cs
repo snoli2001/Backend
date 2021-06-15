@@ -22,6 +22,14 @@ namespace CarryDoggyGo.Data
         public DbSet<Calification> Calification { get; set; }
         public DbSet<NotificationDogWalker> NotificationDogWalkers { get; set; }
         public DbSet<DogOwnerNotification> DogOwnerNotifications { get; set; }
+<<<<<<< HEAD
+=======
+        public DbSet<DogWalkDog> DogWalkDog { get; set; }
+        public DbSet<DogWalk> DogWalks { get; set; }
+        public DbSet<PaymentType> PaymentTypes { get; set; }
+        public DbSet<Report> Reports { get; set; }
+        public DbSet<Message> Messages { get; set; }
+>>>>>>> 57af56379dc85de6637959f328a30cf5f42855e5
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -33,6 +41,15 @@ namespace CarryDoggyGo.Data
             modelBuilder.ApplyConfiguration(new CareItemMap());
             modelBuilder.ApplyConfiguration(new CalificationMap());
             modelBuilder.ApplyConfiguration(new NotificationDogWalkerMap());
+<<<<<<< HEAD
+=======
+            modelBuilder.ApplyConfiguration(new DogWalkMap());
+            modelBuilder.ApplyConfiguration(new DogWalkDogsMap());
+            modelBuilder.ApplyConfiguration(new DogWalkMap());
+            modelBuilder.ApplyConfiguration(new PaymentTypeMap());
+            modelBuilder.ApplyConfiguration(new ReportMap());
+            modelBuilder.ApplyConfiguration(new MessageMap());
+>>>>>>> 57af56379dc85de6637959f328a30cf5f42855e5
         }
     }
 }
