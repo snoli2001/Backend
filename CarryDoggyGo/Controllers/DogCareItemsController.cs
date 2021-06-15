@@ -44,7 +44,7 @@ namespace CarryDoggyGo.Controllers
             };
             //dog.DogCareItems.Add(newAssign);
 
-            await _context.DogCareItems.AddAsync(newAssign);
+            _context.DogCareItems.AddAsync(newAssign);
             try
             {
                 await _context.SaveChangesAsync();
@@ -83,5 +83,9 @@ namespace CarryDoggyGo.Controllers
             });
             return Ok(resources);
         }
+    }
+
+    public class CaresItemsModel
+    {
     }
 }

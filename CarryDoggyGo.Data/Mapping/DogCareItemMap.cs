@@ -13,9 +13,8 @@ namespace CarryDoggyGo.Data.Mapping
     {
         public void Configure(EntityTypeBuilder<DogCareItem> builder)
         {
-            builder.ToTable("dog_care_items");
+            builder.ToTable("DogCareItems");
             builder.HasKey(pt => new { pt.DogId, pt.CareItemId});
-
 
             builder
                 .HasOne(pt => pt.Dog)

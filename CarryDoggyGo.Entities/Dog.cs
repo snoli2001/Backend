@@ -19,6 +19,5 @@ namespace CarryDoggyGo.Entities
 
         public string MedicalInformation { get; set; }
         public virtual ICollection<DogCareItem> DogCareItems{get; set;}
-        public virtual ICollection<DogWalkDog> DogWalkDogs {get; set;}
     }
 } 
