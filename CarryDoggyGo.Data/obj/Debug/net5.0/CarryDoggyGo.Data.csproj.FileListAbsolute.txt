@@ -54,3 +54,21 @@ C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDogg
 C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.genruntimeconfig.cache
 C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\PERSONAL\Desktop\cursos\2021-1\Ap web\trabajo\Backend\Backend\CarryDoggyGo.Data\bin\Debug\net5.0\appsettings.json
+D:\Github\upc2021-1\appweb\140621-2\CarryDoggyGo.Data\bin\Debug\net5.0\CarryDoggyGo.Data.deps.json
+D:\Github\upc2021-1\appweb\140621-2\CarryDoggyGo.Data\bin\Debug\net5.0\CarryDoggyGo.Data.runtimeconfig.json
+D:\Github\upc2021-1\appweb\140621-2\CarryDoggyGo.Data\bin\Debug\net5.0\CarryDoggyGo.Data.runtimeconfig.dev.json
+D:\Github\upc2021-1\appweb\140621-2\CarryDoggyGo.Data\bin\Debug\net5.0\CarryDoggyGo.Data.dll
+D:\Github\upc2021-1\appweb\140621-2\CarryDoggyGo.Data\bin\Debug\net5.0\ref\CarryDoggyGo.Data.dll
+D:\Github\upc2021-1\appweb\140621-2\CarryDoggyGo.Data\bin\Debug\net5.0\CarryDoggyGo.Data.pdb
+D:\Github\upc2021-1\appweb\140621-2\CarryDoggyGo.Data\bin\Debug\net5.0\CarryDoggyGo.Entities.dll
+D:\Github\upc2021-1\appweb\140621-2\CarryDoggyGo.Data\bin\Debug\net5.0\CarryDoggyGo.Entities.pdb
+D:\Github\upc2021-1\appweb\140621-2\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.csprojAssemblyReference.cache
+D:\Github\upc2021-1\appweb\140621-2\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\upc2021-1\appweb\140621-2\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.AssemblyInfoInputs.cache
+D:\Github\upc2021-1\appweb\140621-2\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.AssemblyInfo.cs
+D:\Github\upc2021-1\appweb\140621-2\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.csproj.CoreCompileInputs.cache
+D:\Github\upc2021-1\appweb\140621-2\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.csproj.CopyComplete
+D:\Github\upc2021-1\appweb\140621-2\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.dll
+D:\Github\upc2021-1\appweb\140621-2\CarryDoggyGo.Data\obj\Debug\net5.0\ref\CarryDoggyGo.Data.dll
+D:\Github\upc2021-1\appweb\140621-2\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.pdb
+D:\Github\upc2021-1\appweb\140621-2\CarryDoggyGo.Data\obj\Debug\net5.0\CarryDoggyGo.Data.genruntimeconfig.cache

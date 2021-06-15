@@ -11,7 +11,7 @@ namespace CarryDoggyGo.Entities
         public int DogWalkerId { get; set; }
         public string Description { get; set; }
         public int PaymentAmount { get; set; }
-        public int Calification { get; set; }
+        public int Qualification { get; set; }
         public virtual ICollection<DogWalk> DogWalks { get; set; }
         public virtual ICollection<NotificationDogWalker> NotificationDogWalkers { get; set; }
     }
