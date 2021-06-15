@@ -26,5 +26,7 @@ namespace CarryDoggyGo.Entities
         //by gsinuiri
         public int PaymentTypeId { get; set; }
         public virtual PaymentType PaymentType { get; set; }
+
+        public virtual ICollection<Report> Reports { get; set; }
     }
 }

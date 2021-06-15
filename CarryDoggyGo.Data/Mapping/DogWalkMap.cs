@@ -49,12 +49,6 @@ namespace CarryDoggyGo.Data.Mapping
                 .HasForeignKey(u => u.DogOwnerId)
                 .IsRequired();
 
-            //by gsinuiri
-            builder.HasOne(u => u.PaymentType)
-                .WithMany(u => u.DogWalks)
-                .HasForeignKey(u => u.PaymentTypeId)
-                .IsRequired();
-
             builder.Property(u => u.Date)
                 .HasColumnName("date")
                 .IsRequired();
@@ -64,6 +58,16 @@ namespace CarryDoggyGo.Data.Mapping
                 .HasMaxLength(500)
                 .IsUnicode(false);
 
+            //by gsinuiri
+            builder.HasOne(u => u.PaymentType)
+                .WithMany(u => u.DogWalks)
+                .HasForeignKey(u => u.PaymentTypeId)
+                .IsRequired();
+
+            //by gsinuiri
+            builder.HasMany(dw => dw.Reports)
+                    .WithOne(dw => dw.DogWalk)
+                    .HasForeignKey(dw => dw.DogWalkId);
         }
     }
 }
