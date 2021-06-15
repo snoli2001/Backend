@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Github\\upc2021-1\\appweb\\140621-2\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
+      "projectUniqueName": "D:\\Github\\upc2021-1\\appweb\\dev\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
       "projectName": "CarryDoggyGo.Entities",
-      "projectPath": "D:\\Github\\upc2021-1\\appweb\\140621-2\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
+      "projectPath": "D:\\Github\\upc2021-1\\appweb\\dev\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
       "packagesPath": "C:\\Users\\Giancarlo\\.nuget\\packages\\",
-      "outputPath": "D:\\Github\\upc2021-1\\appweb\\140621-2\\CarryDoggyGo.Entities\\obj\\",
+      "outputPath": "D:\\Github\\upc2021-1\\appweb\\dev\\CarryDoggyGo.Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Giancarlo\\AppData\\Roaming\\NuGet\\NuGet.Config",

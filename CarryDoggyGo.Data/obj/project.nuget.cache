@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aW7PPB+tseDjGy+kYasvCELEQFvwYOglcBS/W06oC6VoRQPogDfmCAJr7p9Cnv9pC5S4C19Jqj3IDy1507kBAA==",
+  "dgSpecHash": "PgqeyVmB/Gun8y4NFIcY0tvl0bjOANPqFpWJj/Q/hSezj3zfROd8igEaAS2RkeLlfhC/tnPDqHyrAg9PMddc/g==",
   "success": true,
-  "projectFilePath": "D:\\Github\\upc2021-1\\appweb\\140621-2\\CarryDoggyGo.Data\\CarryDoggyGo.Data.csproj",
+  "projectFilePath": "D:\\Github\\upc2021-1\\appweb\\dev\\CarryDoggyGo.Data\\CarryDoggyGo.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Giancarlo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Giancarlo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
