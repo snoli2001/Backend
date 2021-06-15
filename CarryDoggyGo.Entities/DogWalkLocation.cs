@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace CarryDoggyGo.Entities
 {
-    public class Message
+    public class DogWalkLocation
     {
-        public int MessageId { get; set; }
-        public string Text { get; set; }
-
         public int DogWalkId { get; set; }
+        public int LocationId { get; set; }
+        public DateTime DateRegister { get; set; }
         public virtual DogWalk DogWalk { get; set; }
+        public virtual Location Location { get; set; }
     }
 }

@@ -68,11 +68,6 @@ namespace CarryDoggyGo.Data.Mapping
             builder.HasMany(dw => dw.Reports)
                     .WithOne(dw => dw.DogWalk)
                     .HasForeignKey(dw => dw.DogWalkId);
-
-            //by gsinuiri
-            builder.HasMany(dw => dw.Messages)
-                    .WithOne(dw => dw.DogWalk)
-                    .HasForeignKey(dw => dw.DogWalkId);
         }
     }
 }

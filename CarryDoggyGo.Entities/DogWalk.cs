@@ -28,6 +28,8 @@ namespace CarryDoggyGo.Entities
         public virtual PaymentType PaymentType { get; set; }
 
         public virtual ICollection<Report> Reports { get; set; }
-        public virtual ICollection<Message> Messages { get; set; }
+
+        //by alejandro
+        public virtual ICollection<DogWalkLocation> DogWalkLocations { get; set; }
     }
 }
