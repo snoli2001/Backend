@@ -24,6 +24,6 @@ namespace CarryDoggyGo.Models.DogOwner
         [StringLength(200, MinimumLength = 6)]
         public string Address { get; set; }
 
-
+        public int DistrictId { get; set; }
     }
 }

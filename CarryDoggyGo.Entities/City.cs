@@ -10,6 +10,7 @@ namespace CarryDoggyGo.Entities
     {
         public int CityId { get; set; }
         public string Name { get; set; }
+
         public virtual ICollection<District> Districts { get; set; }
     }
 }

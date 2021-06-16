@@ -101,7 +101,7 @@ namespace CarryDoggyGo.Controllers
             {
                 Description = model.Description,
                 CreatedAt = DateTime.Now,
-                DogOwnerId = dogOwnerId,
+                DogOwnerId = dogOwnerId
             };
             _context.DogOwnerNotifications.Add(dogOwnerNotification);
             try

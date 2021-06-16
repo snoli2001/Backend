@@ -57,9 +57,9 @@ namespace CarryDoggyGo.Data.Mapping
                 .HasColumnName("address")
                 .IsRequired();
 
-            builder.HasMany(dw => dw.DogWalks)
-                    .WithOne(dw => dw.DogOwner)
-                    .HasForeignKey(dw => dw.DogOwnerId);
+            //builder.HasMany(dw => dw.DogWalks)
+            //        .WithOne(dw => dw.DogOwner)
+            //        .HasForeignKey(dw => dw.DogOwnerId);
 
             //by gsinuiri
             builder.HasMany(dw => dw.DogOwnerNotifications)

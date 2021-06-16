@@ -31,9 +31,6 @@ namespace CarryDoggyGo.Data.Mapping
                 .HasForeignKey(pt => pt.DogWalkId)
                 .HasConstraintName("FK_dog_walk_id")
                 .OnDelete(DeleteBehavior.Restrict);
-
-
-
         }
     }
 }

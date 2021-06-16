@@ -34,7 +34,7 @@ namespace CarryDoggyGo.Controllers
                 Address = d.Address,
                 NumX = d.NumX,
                 NumY = d.NumY,
-                DistrictId = d.DistrictId
+                //DistrictId = d.DistrictId
             });
         }
 
@@ -53,7 +53,7 @@ namespace CarryDoggyGo.Controllers
                 Address = Location.Address,
                 NumX = Location.NumX,
                 NumY = Location.NumY,
-                DistrictId = Location.DistrictId
+                //DistrictId = Location.DistrictId
             });
         }
 

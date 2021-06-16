@@ -15,9 +15,7 @@ namespace CarryDoggyGo.Data.Mapping
         {
             builder.ToTable("cities");
             builder.HasKey(c => c.CityId);
-
             builder.Property(c => c.CityId)
-               .HasColumnName("city_id")
                .ValueGeneratedOnAdd();
 
             builder.Property(c => c.Name)
@@ -26,6 +24,10 @@ namespace CarryDoggyGo.Data.Mapping
                 .IsUnicode(false)
                 .IsRequired();
 
+            //by gsinuiri
+            builder.HasMany(dw => dw.Districts)
+                    .WithOne(dw => dw.City)
+                    .HasForeignKey(dw => dw.CityId);
         }
     }
 }

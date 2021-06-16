@@ -39,7 +39,7 @@ namespace CarryDoggyGo.Controllers
             return Ok(dogWalkList.Select(d => new DogWalkModel
             {
                 DogWalkerId = d.DogWalkerId,
-                DogOwnerId = d.DogOwnerId,
+                //DogOwnerId = d.DogOwnerId,
                 DogWalkId = d.DogWalkId,
                 Hours = d.Hours,
                 Address = d.Address,
@@ -75,7 +75,7 @@ namespace CarryDoggyGo.Controllers
             DogWalk dogWalk = new DogWalk
             {
                 DogWalkerId = model.DogWalkerId,
-                DogOwnerId = dogOnwerId,
+                //DogOwnerId = dogOnwerId,
                 Hours = model.Hours,
                 Address = model.Address,
                 AditionalInformation = model.AditionalInformation,
@@ -97,7 +97,7 @@ namespace CarryDoggyGo.Controllers
             return Ok( new DogWalkModel
             {
                 DogWalkerId = model.DogWalkerId,
-                DogOwnerId = dogOnwerId,
+                //DogOwnerId = dogOnwerId,
                 Hours = model.Hours,
                 Address = model.Address,
                 AditionalInformation = model.AditionalInformation,

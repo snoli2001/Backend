@@ -38,7 +38,9 @@ namespace CarryDoggyGo.Controllers
                 LastName = dogOwner.LastName,
                 Phone = dogOwner.Phone,
                 Email = dogOwner.Email,
-                Address = dogOwner.Address
+                Address = dogOwner.Address,
+                //by gsinuiri
+                DistrictId = dogOwner.DistrictId
             });
         }
 
@@ -59,6 +61,8 @@ namespace CarryDoggyGo.Controllers
                 Phone = dogOnwner.Phone,
                 Email = dogOnwner.Email,
                 Address = dogOnwner.Address,
+                //by gsinuiri
+                DistrictId = dogOnwner.DistrictId
             });
         }
      
@@ -79,6 +83,8 @@ namespace CarryDoggyGo.Controllers
                 Password = model.Password,
                 Phone = model.Phone,
                 Address = model.Address,
+                //by gsinuiri
+                DistrictId = model.DistrictId
             };
             _context.DogOwners.Add(dogOwner);
             try
