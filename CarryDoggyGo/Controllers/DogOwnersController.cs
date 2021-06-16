@@ -58,7 +58,7 @@ namespace CarryDoggyGo.Controllers
                 LastName = dogOnwner.LastName,
                 Phone = dogOnwner.Phone,
                 Email = dogOnwner.Email,
-             
+                Address = dogOnwner.Address,
             });
         }
      
