@@ -36,20 +36,11 @@ namespace CarryDoggyGo.Data.Mapping
 
             builder.Property(l => l.DistrictId)
                    .HasColumnName("district_id");
-            
-            builder.Property(l => l.CityId)
-                   .HasColumnName("city_id");
-            
 
             builder.HasOne(l => l.District)
                 .WithMany(ld => ld.Locations)
                 .HasForeignKey(l => l.DistrictId)
                 .HasConstraintName("FK_district_id");
-
-            builder.HasOne(l => l.City)
-                .WithMany(ld => ld.Locations)
-                .HasForeignKey(l => l.CityId)
-                .HasConstraintName("FK_city_id");
             
         }
     }
