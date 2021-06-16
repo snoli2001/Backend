@@ -15,5 +15,9 @@ namespace CarryDoggyGo.Models.DogWalk
         public DateTime Date { get; set; }
         public string Address { get; set; }
         public List<int> dogsIds { get; set; }
+
+        //public int QualificationId { get; set; }
+        public int PaymentTypeId { get; set; }
+        public int DistrictId { get; set; }
     }
 }

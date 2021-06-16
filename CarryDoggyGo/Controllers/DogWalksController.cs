@@ -50,27 +50,30 @@ namespace CarryDoggyGo.Controllers
 
         }
 
-        [HttpPost("DogOwner/{dogOnwerId}/DogWalks")]
-        public async Task<IActionResult> PostDogWalkers(int dogOnwerId, [FromBody] CreateDogWalkModel model)
+        [HttpPost("DogWalks")]
+        public async Task<IActionResult> PostDogWalkers([FromBody] CreateDogWalkModel model)
         {
-            DogOwner dogOwner = await _context.DogOwners.FindAsync(dogOnwerId);
+            //DogOwner dogOwner = await _context.DogOwners.FindAsync(dogOnwerId);
+
+
             DogWalker dogWalker = await _context.DogWalkers.FindAsync(model.DogWalkerId);
-            var dogs = await _context.Dogs
-                            .Where(d => d.DogOwnerId == dogOnwerId)
-                            .Where(d => model.dogsIds.Contains(d.DogId))
-                            .ToListAsync();
+
+            //var dogs = await _context.Dogs
+            //                .Where(d => d.DogOwnerId == dogOnwerId)
+            //                .Where(d => model.dogsIds.Contains(d.DogId))
+            //                .ToListAsync();
 
 
-            if (dogOwner == null)
-                return NotFound();
+            //if (dogOwner == null)
+            //    return NotFound();
 
             if (dogWalker == null)
                 return NotFound();
 
-            if(dogs == null)
-            {
-                return NotFound();
-            }
+            //if(dogs == null)
+            //{
+            //    return NotFound();
+            //}
 
             DogWalk dogWalk = new DogWalk
             {
@@ -82,6 +85,12 @@ namespace CarryDoggyGo.Controllers
                 PaymentAmount = model.PaymentAmount,
                 Date = model.Date,
                 state = DogWalkState.TO_START,
+
+                DistrictId = model.DistrictId,
+                //TODO: no obligatorio
+                //QualificationId = model.QualificationId,
+                PaymentTypeId = model.PaymentTypeId,
+
             };
 
             _context.DogWalks.Add(dogWalk);
@@ -103,6 +112,8 @@ namespace CarryDoggyGo.Controllers
                 AditionalInformation = model.AditionalInformation,
                 PaymentAmount = model.PaymentAmount,
                 Date = model.Date,
+
+                
             });
 
         }
