@@ -26,6 +26,14 @@ namespace CarryDoggyGo.Data.Mapping
                 .IsUnicode(false)
                 .IsRequired();
 
+            builder.Property(d => d.CityId)
+               .HasColumnName("city_id");
+
+            builder.HasOne(d => d.City)
+                .WithMany(dc => dc.Districts)
+                .HasForeignKey(d => d.CityId)
+                .HasConstraintName("FK_city_id");
+
         }
     }
 }

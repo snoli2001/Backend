@@ -73,6 +73,10 @@ namespace CarryDoggyGo.Data.Migrations
                         .HasColumnName("district_id")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("CityId")
+                        .HasColumnType("int")
+                        .HasColumnName("city_id");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -81,6 +85,8 @@ namespace CarryDoggyGo.Data.Migrations
                         .HasColumnName("name");
 
                     b.HasKey("DistrictId");
+
+                    b.HasIndex("CityId");
 
                     b.ToTable("districts");
                 });
@@ -406,10 +412,6 @@ namespace CarryDoggyGo.Data.Migrations
                         .HasColumnType("varchar(500)")
                         .HasColumnName("address");
 
-                    b.Property<int>("CityId")
-                        .HasColumnType("int")
-                        .HasColumnName("city_id");
-
                     b.Property<int>("DistrictId")
                         .HasColumnType("int")
                         .HasColumnName("district_id");
@@ -423,8 +425,6 @@ namespace CarryDoggyGo.Data.Migrations
                         .HasColumnName("position_y");
 
                     b.HasKey("LocationId");
-
-                    b.HasIndex("CityId");
 
                     b.HasIndex("DistrictId");
 
@@ -566,6 +566,18 @@ namespace CarryDoggyGo.Data.Migrations
                     b.ToTable("Reports");
                 });
 
+            modelBuilder.Entity("CarryDoggyGo.Entities.District", b =>
+                {
+                    b.HasOne("CarryDoggyGo.Entities.City", "City")
+                        .WithMany("Districts")
+                        .HasForeignKey("CityId")
+                        .HasConstraintName("FK_city_id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("City");
+                });
+
             modelBuilder.Entity("CarryDoggyGo.Entities.Dog", b =>
                 {
                     b.HasOne("CarryDoggyGo.Entities.DogOwner", "DogOwner")
@@ -678,21 +690,12 @@ namespace CarryDoggyGo.Data.Migrations
 
             modelBuilder.Entity("CarryDoggyGo.Entities.Location", b =>
                 {
-                    b.HasOne("CarryDoggyGo.Entities.City", "City")
-                        .WithMany("Locations")
-                        .HasForeignKey("CityId")
-                        .HasConstraintName("FK_city_id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("CarryDoggyGo.Entities.District", "District")
                         .WithMany("Locations")
                         .HasForeignKey("DistrictId")
                         .HasConstraintName("FK_district_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("City");
 
                     b.Navigation("District");
                 });
@@ -748,7 +751,7 @@ namespace CarryDoggyGo.Data.Migrations
 
             modelBuilder.Entity("CarryDoggyGo.Entities.City", b =>
                 {
-                    b.Navigation("Locations");
+                    b.Navigation("Districts");
                 });
 
             modelBuilder.Entity("CarryDoggyGo.Entities.District", b =>
