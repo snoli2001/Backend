@@ -14,5 +14,8 @@ namespace CarryDoggyGo.Entities
         public int Qualification { get; set; }
         public virtual ICollection<DogWalk> DogWalks { get; set; }
         public virtual ICollection<NotificationDogWalker> NotificationDogWalkers { get; set; }
+
+        //by gsinuiri
+        public virtual ICollection<DogWalkerDistrict> DogWalkerDistricts { get; set; }
     }
 }

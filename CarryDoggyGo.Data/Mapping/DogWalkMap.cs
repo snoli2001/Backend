@@ -44,10 +44,10 @@ namespace CarryDoggyGo.Data.Mapping
                 .HasForeignKey(u => u.DogWalkerId)
                 .IsRequired();
 
-            builder.HasOne(u => u.DogOwner)
-                .WithMany(u => u.DogWalks)
-                .HasForeignKey(u => u.DogOwnerId)
-                .IsRequired();
+            //builder.HasOne(u => u.DogOwner)
+            //    .WithMany(u => u.DogWalks)
+            //    .HasForeignKey(u => u.DogOwnerId)
+            //    .IsRequired();
 
             builder.Property(u => u.Date)
                 .HasColumnName("date")

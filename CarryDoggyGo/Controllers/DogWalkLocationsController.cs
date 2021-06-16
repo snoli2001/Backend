@@ -82,7 +82,7 @@ namespace CarryDoggyGo.Controllers
                 Address = result.Address,
                 NumX = result.NumX,
                 NumY = result.NumY,
-                DistrictId = result.DistrictId
+                //DistrictId = result.DistrictId
             });
             return Ok(resources);
         }
