@@ -43,7 +43,7 @@ namespace CarryDoggyGo.Controllers
             }
             else
             {
-                return Ok("El dueño de perro no ha registrado ningun perro todavia");
+                return Ok(dogListByDogOwnerId);
             }
         }
 
