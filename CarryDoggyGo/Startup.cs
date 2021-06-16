@@ -24,10 +24,20 @@ namespace CarryDoggyGo
         }
 
         public IConfiguration Configuration { get; }
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  builder =>
+                                  {
+                                      builder.WithOrigins("http://localhost:8080");
+                                  }
+                );
+            });
             services.AddDbContext<DbContextCarryDoggyGo>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DbConnection")));
             services.AddControllers();
@@ -53,6 +63,8 @@ namespace CarryDoggyGo
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseEndpoints(endpoints =>
             {
