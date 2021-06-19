@@ -1,7 +1,7 @@
 ﻿using CarryDoggyGo.Controllers;
 using CarryDoggyGo.Data;
 using CarryDoggyGo.Entities;
-using CarryDoggyGo.Models.CaresItem;
+using CarryDoggyGo.Models.DogWalk;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -13,99 +13,65 @@ using Xunit;
 
 namespace CarryDoggyGoTesting
 {
-    public class CareItemsControllerTest
+    public class DogWalksControllerTest
     {
-
         private readonly DbContextOptionsBuilder<DbContextCarryDoggyGo> _builder = new DbContextOptionsBuilder<DbContextCarryDoggyGo>();  // builder necesario para crear nuestra base de datos ficticia
         private readonly DbContextOptions<DbContextCarryDoggyGo> _options; // options para construir nuestro DbContext en memoria
-        private readonly List<CareItem> _careItems; // lista utilizada para testear
+        private readonly List<DogWalk> _dogWalks; // lista utilizada para testear
 
-        public CareItemsControllerTest()
+        public DogWalksControllerTest()
         {
             _builder.UseInMemoryDatabase("Test"); // nombre de la base de datos ficticia
             _options = _builder.Options;// pasando la configuración del builder al option
-            _careItems = getCareItemsSession(); // inicializando la lista de paseadores de perros que 
-        }
-        public List<CareItem> getCareItemsSession()
-        {
-            var careItems = new List<CareItem>();
-            careItems.Add(new CareItem
-            {
-                CareItemId = 1,
-                Name = "Test1",
-                Description = "una descripcion",
-            });
-            careItems.Add(new CareItem
-            {
-                CareItemId = 2,
-                Name = "Test2",
-                Description = "una descripcion dos",
-            });
-            return careItems;
+            _dogWalks = getDogWalksSession(); // inicializando la lista de paseadores de perros que 
         }
 
         [Fact]
-        public async Task GetCareItemAsyncReturnAIEnumerableOfCareItemModel()
+        public async Task GetDogWalksByIdReturnAIActionResultWithDogWalks()
         {
             using (var _context = new DbContextCarryDoggyGo(_options))
             {
                 //Arrange
-                _context.CareItems.AddRange(_careItems); // añadiendo la lista en la base de datos ficticia con la lista de paseadores de perros de testeo
-                _context.SaveChanges(); // guardando en la base de datos
-
-                var controller = new CareItemsController(_context); // inicializando nuestro controlador 
-
-                //Act
-                var result = await controller.GetCareItems(); // llamando nuestro get
-
-                //Assert
-                Assert.True(typeof(IEnumerable<CaresItemModel>).IsInstanceOfType(result)); // verificando que nuestro método get retorne el resultado esperado
-                Assert.Equal(2, result.Count()); // ya que nuestra lista de paseadores de perros que le pasamos contiene 2 paseadores de perro verificamos que nuestro método también retorne 2 paseadores 
-            }
-        }
-
-        [Fact]
-        public async Task GetCareItemByIdReturnAIActionResultWithCareItem()
-        {
-            using (var _context = new DbContextCarryDoggyGo(_options))
-            {
-                //Arrange
-                _context.CareItems.AddRange(_careItems);
+                _context.DogWalks.AddRange(_dogWalks);
                 _context.SaveChanges();
 
-                var controller = new CareItemsController(_context);
+                var controller = new DogWalksController(_context);
 
                 //Act
-                var result = await controller.GetCaresItemById(1);
+                var result = await controller.GetDogWalkers(2);
 
                 //Assert
-                Assert.True(typeof(OkObjectResult).IsInstanceOfType(result));
+                Assert.False(typeof(OkObjectResult).IsInstanceOfType(result));
             }
         }
 
         [Fact]
-        public async Task PostCareitemReturnAnOkObjectResult()
+        public async Task PostDogWalksReturnAnOkObjectResult()
         {
             using (var _context = new DbContextCarryDoggyGo(_options))
             {
                 //Arrange
-                CreateCareitemModel newCareItem = new CreateCareitemModel
+                CreateDogWalkModel newDogWalks = new CreateDogWalkModel
                 {
-                    Name = "Test1",
-                    Description = "una descripcion",
+                    Hours = 2,
+                    Address = "av. viru",
+                    AditionalInformation = "Informacion 1",
+                    PaymentAmount = "30",
+                    DogWalkerId=1,
+                    Date = DateTime.Now
                 };
-                var controller = new CareItemsController(_context);
+                var controller = new DogWalksController(_context);
 
                 //Act
-                var result = await controller.PostCareItem(newCareItem);
+                var result = await controller.PostDogWalkers(newDogWalks);
 
                 //Assert
                 Assert.True(typeof(OkObjectResult).IsInstanceOfType(result));
             }
         }
 
-        [Fact]
-        public async Task PutCareItemReturnAnOkObjectResult()
+        /*[Fact]
+        public async Task PatchDogWalksInProgress()
         {
             using (var _context = new DbContextCarryDoggyGo(_options))
             {
@@ -143,8 +109,33 @@ namespace CarryDoggyGoTesting
                 //Assert
                 Assert.True(typeof(OkObjectResult).IsInstanceOfType(result));
             }
+        }*/
+
+        public List<DogWalk> getDogWalksSession()
+        {
+            var dogWalks = new List<DogWalk>();
+            dogWalks.Add(new DogWalk
+            {
+                DogWalkerId = 1,
+                DogWalkId = 1,
+                Hours = 2,
+                Address = "av. viru",
+                AditionalInformation = "Informacion 1",
+                PaymentAmount = "30",
+                Date = DateTime.Now
+
+            });
+            dogWalks.Add(new DogWalk
+            {
+                DogWalkerId = 2,
+                DogWalkId = 2,
+                Hours = 3,
+                Address = "av. piru",
+                AditionalInformation = "Informacion 2",
+                PaymentAmount = "20",
+                Date = DateTime.Now
+            });
+            return dogWalks;
         }
-
-
     }
 }

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CarryDoggyGo.Data;
 using CarryDoggyGo.Entities;
+using CarryDoggyGo.Models.QualificationModel;
 
 namespace CarryDoggyGo.Controllers
 {
@@ -23,81 +24,118 @@ namespace CarryDoggyGo.Controllers
 
         // GET: api/Qualifications
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Qualification>>> GetQualification()
+        public async Task<IEnumerable<QualificationModel>> GetQualification()
         {
-            return await _context.Qualifications.ToListAsync();
+            var QualificationList = await _context.Qualifications.ToListAsync();
+
+            return QualificationList.Select(c => new QualificationModel
+            {
+                QualificationId = c.QualificationId,
+                Starts = c.Starts,
+                Recomendations = c.Recomendations,
+            });
+
         }
 
         // GET: api/Qualifications/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Qualification>> GetQualification(int id)
+        public async Task<IActionResult> GetQualificationById(int id)
         {
             var Qualification = await _context.Qualifications.FindAsync(id);
 
             if (Qualification == null)
-            {
                 return NotFound();
-            }
 
-            return Qualification;
+            return Ok(new QualificationModel
+            {
+                QualificationId = Qualification.QualificationId,
+                Starts = Qualification.Starts,
+                Recomendations = Qualification.Recomendations,
+            });
+
         }
 
         // PUT: api/Qualifications/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutQualification(int id, Qualification Qualification)
+        public async Task<IActionResult> PutQualification(int id, [FromBody] UpdateQualificationModel model)
         {
-            if (id != Qualification.QualificationId)
-            {
-                return BadRequest();
-            }
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-            _context.Entry(Qualification).State = EntityState.Modified;
+            if (id <= 0)
+                return BadRequest();
+
+            var Qualification = await _context.Qualifications.FirstOrDefaultAsync(d => d.QualificationId == id);
+
+            if (Qualification == null)
+                return NotFound();
+
+            Qualification.Starts = model.Starts;
+            Qualification.Recomendations = model.Recomendations;
 
             try
             {
                 await _context.SaveChangesAsync();
             }
-            catch (DbUpdateConcurrencyException)
+            catch (DbUpdateConcurrencyException ex)
             {
-                if (!QualificationExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return BadRequest(ex.Message);
             }
 
-            return NoContent();
+            return Ok(model);
+
         }
 
         // POST: api/Qualifications
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Qualification>> PostQualification(Qualification Qualification)
+        public async Task<IActionResult> PostQualification([FromBody] CreateQualificationModel model)
         {
-            _context.Qualifications.Add(Qualification);
-            await _context.SaveChangesAsync();
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-            return CreatedAtAction("GetQualification", new { id = Qualification.QualificationId }, Qualification);
+            Qualification calification = new Qualification
+            {
+
+                Starts = model.Starts,
+                Recomendations = model.Recomendations,
+
+            };
+            _context.Qualifications.Add(calification);
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+            return Ok(model);
+
         }
 
         // DELETE: api/Qualifications/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteQualification(int id)
         {
-            var Qualification = await _context.Qualifications.FindAsync(id);
-            if (Qualification == null)
-            {
+            var existingcalification = await _context.Qualifications.FindAsync(id);
+            if (existingcalification == null)
                 return NotFound();
+
+            try
+            {
+                _context.Remove(existingcalification);
+                await _context.SaveChangesAsync();
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
             }
 
-            _context.Qualifications.Remove(Qualification);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            return Ok(existingcalification);
         }
 
         private bool QualificationExists(int id)

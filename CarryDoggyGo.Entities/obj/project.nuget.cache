@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1dW6L2DGFURN3dXchIDyl+n2lV+bJnJVlkp8885WqskqvAdbbf25Zg0WzNUfVKu2y4lAe9mGzNP9DCH9n0ii3A==",
+  "dgSpecHash": "fkm5MT5gwWi9wM8jP33ezLiq24fAvbkZgeVqHLFz78jzeup9cdJYvsvAmS8b2+TqY1LXDGI1TwB7MCCK+KF4hQ==",
   "success": true,
-  "projectFilePath": "D:\\Github\\upc2021-1\\appweb\\aaa\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
+  "projectFilePath": "D:\\Github\\upc2021-1\\appweb\\dev\\CarryDoggyGo.Entities\\CarryDoggyGo.Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

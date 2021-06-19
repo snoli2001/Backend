@@ -93,7 +93,7 @@ namespace CarryDoggyGoTesting
                 Race = "Race2",
                 Description = "una descripcion 2",
                 Diseases = "Disease2",
-                DogOwnerId = 1,
+                DogOwnerId = 2,
                 MedicalInformation = "MedicalInformation2",
             });
             return dogownerdogs;

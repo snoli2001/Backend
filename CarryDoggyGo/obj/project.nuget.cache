@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kSZQSRfRmB+RGERL2d8Hq+TrpSg0G1Vk+E+/x99RoTi3+XHUKC6M4qxlhwSv4FccovcI3rFoIgQlIHdWhMOaHQ==",
+  "dgSpecHash": "gXs1oZo5CIuqQZwhpkz9XMKPKe23Vm4ZQlN+Hviqe8VZXDxv55gcPBAz3+T5FwSpsLIxTFONxkqs/UgNKCBGMA==",
   "success": true,
-  "projectFilePath": "D:\\Github\\upc2021-1\\appweb\\aaa\\CarryDoggyGo\\CarryDoggyGo.csproj",
+  "projectFilePath": "D:\\Github\\upc2021-1\\appweb\\dev\\CarryDoggyGo\\CarryDoggyGo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Giancarlo\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Giancarlo\\.nuget\\packages\\bodi\\1.5.0\\bodi.1.5.0.nupkg.sha512",

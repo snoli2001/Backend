@@ -12,11 +12,11 @@ namespace CarryDoggyGo.Controllers
 {
     [Route("api/DogOwners")]
     [ApiController]
-    public class DogOwnerDogWalks : ControllerBase
+    public class DogOwnerDogWalksController : ControllerBase
     {
         private readonly DbContextCarryDoggyGo _context;
 
-        public DogOwnerDogWalks(DbContextCarryDoggyGo context)
+        public DogOwnerDogWalksController(DbContextCarryDoggyGo context)
         {
             _context = context;
         }

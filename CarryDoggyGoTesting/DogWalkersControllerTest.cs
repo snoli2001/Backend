@@ -15,13 +15,13 @@ using Xunit;
 
 namespace CarryDoggyGoTesting
 {
-    public class DogWalkerControllerTest
+    public class DogWalkersControllerTest
     {
         private readonly DbContextOptionsBuilder<DbContextCarryDoggyGo> _builder = new DbContextOptionsBuilder<DbContextCarryDoggyGo>();  // builder necesario para crear nuestra base de datos ficticia
         private readonly DbContextOptions<DbContextCarryDoggyGo> _options; // options para construir nuestro DbContext en memoria
         private readonly List<DogWalker>_dogWalkers; // lista utilizada para testear
 
-        public DogWalkerControllerTest()
+        public DogWalkersControllerTest()
         {
             _builder.UseInMemoryDatabase("Test"); // nombre de la base de datos ficticia
             _options = _builder.Options;// pasando la configuración del builder al option

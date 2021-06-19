@@ -13,13 +13,13 @@ using Xunit;
 
 namespace CarryDoggyGoTesting
 {
-    public class DogOwnerControllerTest
+    public class DogOwnersControllerTest
     {
         private readonly DbContextOptionsBuilder<DbContextCarryDoggyGo> _builder = new DbContextOptionsBuilder<DbContextCarryDoggyGo>();
         private readonly DbContextOptions<DbContextCarryDoggyGo> _options;
         private readonly List<DogOwner> _dogOwners;
 
-        public DogOwnerControllerTest()
+        public DogOwnersControllerTest()
         {
             _builder.UseInMemoryDatabase("Test");
             _options = _builder.Options;
