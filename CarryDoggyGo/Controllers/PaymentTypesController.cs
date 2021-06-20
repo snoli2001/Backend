@@ -29,7 +29,6 @@ namespace CarryDoggyGo.Controllers
         {
             var paymentTypeList = await _context.PaymentTypes.ToListAsync();
 
-
             return paymentTypeList.Select(d => new PaymentTypeModel
             {
                 PaymentTypeId = d.PaymentTypeId,

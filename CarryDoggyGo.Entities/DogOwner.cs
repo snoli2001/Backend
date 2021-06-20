@@ -12,7 +12,8 @@ namespace CarryDoggyGo.Entities
         public string Address { get; set; }
 
         public virtual ICollection<Dog> Dogs { get; set; }
-        public virtual ICollection<DogWalk> DogWalks { get; set; }
+
+        //public virtual ICollection<DogWalk> DogWalks { get; set; }
 
         //by gsinuiri
         public int DistrictId { get; set; }

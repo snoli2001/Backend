@@ -24,12 +24,11 @@ namespace CarryDoggyGo.Controllers
 
         // GET: api/NotificationDogWalkers
         [HttpGet]
-        public async Task<IEnumerable<NotificationDogWalker>> GetNotificationDogWalkers()
+        public async Task<IEnumerable<NotificationDogWalkerModel>> GetNotificationDogWalkers()
         {
             var notificationDogWalkerList = await _context.NotificationDogWalkers.ToListAsync();
-            
 
-            return notificationDogWalkerList.Select(d => new NotificationDogWalker
+            return notificationDogWalkerList.Select(d => new NotificationDogWalkerModel
             {
                 NotificationDogWalkerId = d.NotificationDogWalkerId,
                 DogWalkerId = d.DogWalkerId,
@@ -101,7 +100,7 @@ namespace CarryDoggyGo.Controllers
                 DogWalkerId=model.DogWalkerId,
                 ShippingDate = DateTime.Now,
                 Description = model.Description,
-                AcceptDeny=model.AcceptDeny
+                //AcceptDeny=model.AcceptDeny
                 
             };
             _context.NotificationDogWalkers.Add(notificationDogWalker);

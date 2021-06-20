@@ -16,11 +16,8 @@ namespace CarryDoggyGo.Entities
         public int DogWalkerId { get; set; }
         public virtual DogWalker DogWalker { get; set; }
 
-        //public int DogOwnerId { get; set; }
-        //public virtual DogOwner DogOwner { get; set; }
-
         public virtual Qualification Qualification { get; set; }
-        public int QualificationId { get; set; }
+        public int? QualificationId { get; set; }
 
         public DateTime Date { get; set; }
         public string Address { get; set; }

@@ -76,7 +76,7 @@ namespace CarryDoggyGoTesting
                     DogWalkerId = 1,
                     ShippingDate = DateTime.Now,
                     Description = "una descripcion",
-                    AcceptDeny = true
+                    //AcceptDeny = true
                 };
                 var controller = new NotificationDogWalkersController(_context);
 

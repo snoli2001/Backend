@@ -23,13 +23,10 @@ namespace CarryDoggyGo.Data.Mapping
             builder.Property(dw => dw.Starts)
              .HasColumnName("starts").IsUnicode(false).IsRequired();
 
-
             builder.Property(dw => dw.Recomendations)
              .HasColumnName("description")
              .HasMaxLength(500)
              .IsUnicode(false);
-
         }
-
     }
 }

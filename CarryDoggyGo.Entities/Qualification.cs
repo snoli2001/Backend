@@ -14,6 +14,5 @@ namespace CarryDoggyGo.Entities
 
         public virtual DogWalk DogWalk { get; set; }
         public int DogWalkId { get; set; }
-
     }
 }

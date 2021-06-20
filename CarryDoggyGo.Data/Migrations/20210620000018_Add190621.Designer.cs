@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CarryDoggyGo.Data.Migrations
 {
     [DbContext(typeof(DbContextCarryDoggyGo))]
-    [Migration("20210616084856_UpdateDogWalkDistrict")]
-    partial class UpdateDogWalkDistrict
+    [Migration("20210620000018_Add190621")]
+    partial class Add190621
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -263,9 +263,6 @@ namespace CarryDoggyGo.Data.Migrations
                     b.Property<int>("DistrictId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("DogOwnerId")
-                        .HasColumnType("int");
-
                     b.Property<int>("DogWalkerId")
                         .HasColumnType("int");
 
@@ -281,7 +278,7 @@ namespace CarryDoggyGo.Data.Migrations
                     b.Property<int>("PaymentTypeId")
                         .HasColumnType("int");
 
-                    b.Property<int>("QualificationId")
+                    b.Property<int?>("QualificationId")
                         .HasColumnType("int");
 
                     b.Property<int>("state")
@@ -290,8 +287,6 @@ namespace CarryDoggyGo.Data.Migrations
                     b.HasKey("DogWalkId");
 
                     b.HasIndex("DistrictId");
-
-                    b.HasIndex("DogOwnerId");
 
                     b.HasIndex("DogWalkerId");
 
@@ -655,10 +650,6 @@ namespace CarryDoggyGo.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CarryDoggyGo.Entities.DogOwner", null)
-                        .WithMany("DogWalks")
-                        .HasForeignKey("DogOwnerId");
-
                     b.HasOne("CarryDoggyGo.Entities.DogWalker", "DogWalker")
                         .WithMany("DogWalks")
                         .HasForeignKey("DogWalkerId")
@@ -814,8 +805,6 @@ namespace CarryDoggyGo.Data.Migrations
                     b.Navigation("DogOwnerNotifications");
 
                     b.Navigation("Dogs");
-
-                    b.Navigation("DogWalks");
                 });
 
             modelBuilder.Entity("CarryDoggyGo.Entities.DogWalk", b =>

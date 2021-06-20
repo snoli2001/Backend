@@ -15,6 +15,6 @@ namespace CarryDoggyGo.Models.NotificationDogWalker
         [Required(ErrorMessage = "Debe ingresar un description")]
         [StringLength(500, MinimumLength = 2, ErrorMessage = "La descripción debe requerir entre 2 y 500 caracteres")]
         public string Description { get; set; }
-        public bool? AcceptDeny { get; set; }
+        //public bool? AcceptDeny { get; set; }
     }
 }

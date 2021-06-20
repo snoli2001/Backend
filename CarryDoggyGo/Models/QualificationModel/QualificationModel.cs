@@ -10,5 +10,6 @@ namespace CarryDoggyGo.Models.QualificationModel
         public int QualificationId { get; set; }
         public int Starts { get; set; }
         public string Recomendations { get; set; }
+        public int DogWalkId { get; set; }
     }
 }
