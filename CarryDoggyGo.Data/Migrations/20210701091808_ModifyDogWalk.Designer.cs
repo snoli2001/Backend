@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CarryDoggyGo.Data.Migrations
 {
     [DbContext(typeof(DbContextCarryDoggyGo))]
-    [Migration("20210620000018_Add190621")]
-    partial class Add190621
+    [Migration("20210701091808_ModifyDogWalk")]
+    partial class ModifyDogWalk
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

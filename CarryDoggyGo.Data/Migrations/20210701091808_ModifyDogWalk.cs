@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CarryDoggyGo.Data.Migrations
 {
-    public partial class Add190621 : Migration
+    public partial class ModifyDogWalk : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

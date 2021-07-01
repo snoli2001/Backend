@@ -92,3 +92,4 @@ D:\Github\upc2021-1\appweb\dev\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggy
 D:\Github\upc2021-1\appweb\dev\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.dll
 D:\Github\upc2021-1\appweb\dev\CarryDoggyGo.Entities\obj\Debug\net5.0\ref\CarryDoggyGo.Entities.dll
 D:\Github\upc2021-1\appweb\dev\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.pdb
+D:\Github\upc2021-1\appweb\dev\CarryDoggyGo.Entities\obj\Debug\net5.0\CarryDoggyGo.Entities.csprojAssemblyReference.cache

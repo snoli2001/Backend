@@ -53,32 +53,21 @@ namespace CarryDoggyGo.Controllers
         [HttpPost("DogWalks")]
         public async Task<IActionResult> PostDogWalkers([FromBody] CreateDogWalkModel model)
         {
-            //DogOwner dogOwner = await _context.DogOwners.FindAsync(dogOnwerId);
-
-
             DogWalker dogWalker = await _context.DogWalkers.FindAsync(model.DogWalkerId);
 
-            //var dogs = await _context.Dogs
-            //                .Where(d => d.DogOwnerId == dogOnwerId)
-            //                .Where(d => model.dogsIds.Contains(d.DogId))
-            //                .ToListAsync();
-
-
-            //if (dogOwner == null)
-            //    return NotFound();
+            var dogs = await _context.Dogs
+                            .Where(d => model.dogsIds.Contains(d.DogId))
+                            .ToListAsync();
 
             if (dogWalker == null)
                 return NotFound();
 
-            //if(dogs == null)
-            //{
-            //    return NotFound();
-            //}
+            if (dogs == null)
+                return NotFound();
 
             DogWalk dogWalk = new DogWalk
             {
                 DogWalkerId = model.DogWalkerId,
-                //DogOwnerId = dogOnwerId,
                 Hours = model.Hours,
                 Address = model.Address,
                 AditionalInformation = model.AditionalInformation,
@@ -90,8 +79,15 @@ namespace CarryDoggyGo.Controllers
                 //TODO: no obligatorio
                 //QualificationId = model.QualificationId,
                 PaymentTypeId = model.PaymentTypeId,
-
             };
+
+            dogWalk.DogWalkDogs = dogs
+                .Select(x => new DogWalkDog
+                {
+                    DogId = x.DogId,
+                    DogWalk = dogWalk
+                })
+                .ToList();
 
             _context.DogWalks.Add(dogWalk);
             try
@@ -112,8 +108,6 @@ namespace CarryDoggyGo.Controllers
                 AditionalInformation = model.AditionalInformation,
                 PaymentAmount = model.PaymentAmount,
                 Date = model.Date,
-
-                
             });
 
         }
