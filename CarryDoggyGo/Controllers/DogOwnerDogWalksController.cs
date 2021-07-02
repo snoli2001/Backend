@@ -3,6 +3,7 @@ using CarryDoggyGo.Models.DogWalk;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using MoreLinq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,10 @@ namespace CarryDoggyGo.Controllers
                 .Include(pt => pt.Dog)
                 .Where(x => x.Dog.DogOwnerId.Equals(dogOwnerId))
                 .ToListAsync();
+
+            dogWalkDogs = dogWalkDogs
+                .DistinctBy(x => x.DogWalkId)
+                .ToList();
 
             if (dogWalkDogs == null)
                 return null;

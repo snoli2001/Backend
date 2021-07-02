@@ -1357,3 +1357,4 @@ D:\Github\upc2021-1\appweb\dev\CarryDoggyGo\obj\Debug\net5.0\CarryDoggyGo.dll
 D:\Github\upc2021-1\appweb\dev\CarryDoggyGo\obj\Debug\net5.0\ref\CarryDoggyGo.dll
 D:\Github\upc2021-1\appweb\dev\CarryDoggyGo\obj\Debug\net5.0\CarryDoggyGo.pdb
 D:\Github\upc2021-1\appweb\dev\CarryDoggyGo\obj\Debug\net5.0\CarryDoggyGo.genruntimeconfig.cache
+D:\Github\upc2021-1\appweb\dev\CarryDoggyGo\bin\Debug\net5.0\MoreLinq.dll

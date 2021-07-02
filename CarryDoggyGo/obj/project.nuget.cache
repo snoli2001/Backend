@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gXs1oZo5CIuqQZwhpkz9XMKPKe23Vm4ZQlN+Hviqe8VZXDxv55gcPBAz3+T5FwSpsLIxTFONxkqs/UgNKCBGMA==",
+  "dgSpecHash": "rLw8ySO0sKTrRR87CW3HZLCi9OJ/zAuqNdfF/mOqeBV8MvkNoWkBQnCbrnn5ZjGpUFYTDEASlNDZDQsQZrJBCA==",
   "success": true,
   "projectFilePath": "D:\\Github\\upc2021-1\\appweb\\dev\\CarryDoggyGo\\CarryDoggyGo.csproj",
   "expectedPackageFiles": [
@@ -66,6 +66,7 @@
     "C:\\Users\\Giancarlo\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Giancarlo\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Giancarlo\\.nuget\\packages\\moq\\4.16.1\\moq.4.16.1.nupkg.sha512",
+    "C:\\Users\\Giancarlo\\.nuget\\packages\\morelinq\\3.3.2\\morelinq.3.3.2.nupkg.sha512",
     "C:\\Users\\Giancarlo\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\Giancarlo\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\Giancarlo\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
