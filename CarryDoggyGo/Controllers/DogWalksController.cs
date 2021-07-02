@@ -46,6 +46,7 @@ namespace CarryDoggyGo.Controllers
                 AditionalInformation = d.AditionalInformation,
                 PaymentAmount = d.PaymentAmount,
                 Date = d.Date,
+                state = d.state
             }));
 
         }
